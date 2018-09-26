@@ -56,4 +56,71 @@ inherits(x, "a", TRUE) # 1
 inherits(x, c("a", "b", "c"), TRUE) # 1 2 0
 
 ```
+## 2nd class
+```{r}
+round(2.37443)
+```
+
+```{r}
+round(2.37443, digits=4)
+```
+
+```{r}
+round(2.7443)
+```
+```{r}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+library(dplyr)
+library(magrittr)
+student %<>% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))
+```
+```{r}
+as.factor(student$出生地) -> student$出生地
+as.factor(student$入學年) -> student$入學年
+as.factor(student$性別) -> student$性別
+as.factor(student$身高) -> student$身高
+as.factor(student$身高級距) -> student$身高級距
+```
+
+```{r}
+levels(student$出生地)
+```
+
+```{r}
+table(student$出生地)
+```
+
+```{r}
+factor(student$身高級距,
+       levels=c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]"),
+       ordered=TRUE) -> student$身高級距
+```
+```{r}
+heightLevels<-c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]")
+```
+```{r}
+levels=heightLevels
+```
+
+```{r}
+heightLevels <- c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]")
+factor(student$身高級距,
+       levels=heightLevels,
+       ordered=TRUE) -> student$身高級距
+```
+
+a<-"2017-01-31"
+
+```{r}
+library(lubridate)
+a <- ymd("2017-01-31") 
+b <- ymd_hms("2017-01-31 20:11:59")
+```
+
+```{r}
+a <- ymd("2017/01/31") 
+b <- ymd_hms("2017-01-31 2:53:00pm")
+```
 

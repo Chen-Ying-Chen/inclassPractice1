@@ -188,15 +188,32 @@ c &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;yea
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHcgPC0gXCJIYWRsZXkgV2lja2hhbVwiXG5saWJyYXJ5KHN0cmluZ3IpXG5cbnN0cl9zdWIoaHcsIGVuZCA9IDYpXG5zdHJfc3ViKGh3LCA4LCAxNClcbnN0cl9zdWIoaHcsIDgpXG5zdHJfc3ViKGh3LCBjKDEsIDgpLCBjKDYsIDE0KSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHcgPC0gXCJIYWRsZXkgV2lja2hhbVwiXG5saWJyYXJ5KHN0cmluZ3IpXG5zdHJfc3ViKGh3LCBlbmQgPSA2KVxuYGBgIn0= -->
 <pre class="r"><code>hw &lt;- &quot;Hadley Wickham&quot;
 library(stringr)
-
-str_sub(hw, end = 6)
-str_sub(hw, 8, 14)
-str_sub(hw, 8)
-str_sub(hw, c(1, 8), c(6, 14))</code></pre>
+str_sub(hw, end = 6)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiSGFkbGV5XCJcbiJ9 -->
+<pre><code>[1] &quot;Hadley&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1YihodywgOCwgMTQpXG5gYGAifQ== -->
+<pre class="r"><code>str_sub(hw, 8, 14)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiV2lja2hhbVwiXG4ifQ== -->
+<pre><code>[1] &quot;Wickham&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1YihodywgOClcbmBgYCJ9 -->
+<pre class="r"><code>str_sub(hw, 8)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiV2lja2hhbVwiXG4ifQ== -->
+<pre><code>[1] &quot;Wickham&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1YihodywgYygxLCA4KSwgYyg2LCAxNCkpXG5gYGAifQ== -->
+<pre class="r"><code>str_sub(hw, c(1, 8), c(6, 14))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiSGFkbGV5XCIgIFwiV2lja2hhbVwiXG4ifQ== -->
+<pre><code>[1] &quot;Hadley&quot;  &quot;Wickham&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->

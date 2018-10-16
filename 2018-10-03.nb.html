@@ -176,21 +176,68 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
+<pre class="r"><code>library(lubridate)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
+<pre><code>
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBzZXEoeW1kKFwiMjAwMS0wMS0wMVwiKSx5bWQoXCIyMDE4LTA5LTAxXCIpLGJ5PVwibW9udGhcIilcbmIgPC0gc2VxKHltZChcIjIwMDEtMDEtMDFcIikseW1kKFwiMjAxOC0wOS0wMVwiKSxieT1cInF1YXJ0ZXJcIilcbmMgPC0gc2VxKHltZChcIjIwMDEtMDEtMDFcIikseW1kKFwiMjAxOC0wOS0wMVwiKSxieT1cInllYXJcIilcbmBgYCJ9 -->
+<pre class="r"><code>a &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;month&quot;)
+b &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;quarter&quot;)
+c &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;year&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHcgPC0gXCJIYWRsZXkgV2lja2hhbVwiXG5saWJyYXJ5KHN0cmluZ3IpXG5cbnN0cl9zdWIoaHcsIGVuZCA9IDYpXG5zdHJfc3ViKGh3LCA4LCAxNClcbnN0cl9zdWIoaHcsIDgpXG5zdHJfc3ViKGh3LCBjKDEsIDgpLCBjKDYsIDE0KSlcbmBgYCJ9 -->
+<pre class="r"><code>hw &lt;- &quot;Hadley Wickham&quot;
+library(stringr)
+
+str_sub(hw, end = 6)
+str_sub(hw, 8, 14)
+str_sub(hw, 8)
+str_sub(hw, c(1, 8), c(6, 14))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbnN0dWRlbnRJRCA8LSByZWFkX2NzdihcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL3N0dWRlbnRJRC5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)
+studentID &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1YihzdHVkZW50SUQk5a246JmfLDUsNilcbmBgYCJ9 -->
+<pre class="r"><code>str_sub(studentID$學號,5,6)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIjc3XCIgXCI3NlwiIFwiNzRcIiBcIjc3XCIgXCI4MlwiIFwiNzZcIiBcIjc0XCIgXCI3N1wiIFwiODFcIiBcIjc3XCIgXCI4MFwiXG5bMTJdIFwiNzlcIiBcIjc2XCIgXCI3MVwiIFwiNzRcIiBcIjc3XCIgXCI4MFwiIFwiNzRcIiBcIjc3XCIgXCI3NlwiIFwiNzdcIiBcIjc5XCJcblsyM10gXCI3OVwiIFwiODBcIiBcIjc0XCIgXCI3NFwiIFwiNzlcIiBcIjc2XCIgXCI4MFwiIFwiNzRcIiBcIjc2XCIgXCI3NFwiIFwiNzdcIlxuWzM0XSBcIjc5XCIgXCI4MVwiIFwiOTFcIiBcIjc2XCIgXCI3N1wiIFwiNzdcIiBcIjgyXCIgXCI3OVwiIFwiNzZcIiBcIjc5XCIgXCI4MlwiXG5bNDVdIFwiODJcIiBcIjc2XCIgXCI4MVwiIFwiNzlcIiBcIjc0XCIgXCI3NlwiIFwiODJcIiBcIjc2XCIgXCI4MlwiIFwiODJcIiBcIjgxXCJcbls1Nl0gXCI4MFwiIFwiODFcIiBcIjgwXCIgXCI4MlwiIFwiODJcIiBcIjc3XCIgXCI3N1wiIFwiNzZcIiBcIjc0XCIgXCI3NlwiIFwiNzZcIlxuWzY3XSBcIjc5XCIgXCI4MlwiIFwiNzZcIiBcIjgwXCIgXCI3NlwiIFwiNzRcIiBcIjgyXCIgXCI3OVwiIFwiODFcIiBcIjc5XCIgXCI3NFwiXG5bNzhdIFwiODJcIiBcIjc3XCIgXCI3NlwiIFwiODNcIiBcIjc3XCIgXCI3OVwiIFwiODFcIiBcIjc5XCIgXCI3OVwiIFwiODJcIiBcIjc5XCJcbls4OV0gXCI3OVwiIFwiNzlcIiBcIjc2XCIgXCI3NlwiIFwiNzZcIiBcIjc3XCIgXCI3OVwiXG4ifQ== -->
+<pre><code> [1] &quot;77&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot; &quot;82&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot; &quot;81&quot; &quot;77&quot; &quot;80&quot;
+[12] &quot;79&quot; &quot;76&quot; &quot;71&quot; &quot;74&quot; &quot;77&quot; &quot;80&quot; &quot;74&quot; &quot;77&quot; &quot;76&quot; &quot;77&quot; &quot;79&quot;
+[23] &quot;79&quot; &quot;80&quot; &quot;74&quot; &quot;74&quot; &quot;79&quot; &quot;76&quot; &quot;80&quot; &quot;74&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot;
+[34] &quot;79&quot; &quot;81&quot; &quot;91&quot; &quot;76&quot; &quot;77&quot; &quot;77&quot; &quot;82&quot; &quot;79&quot; &quot;76&quot; &quot;79&quot; &quot;82&quot;
+[45] &quot;82&quot; &quot;76&quot; &quot;81&quot; &quot;79&quot; &quot;74&quot; &quot;76&quot; &quot;82&quot; &quot;76&quot; &quot;82&quot; &quot;82&quot; &quot;81&quot;
+[56] &quot;80&quot; &quot;81&quot; &quot;80&quot; &quot;82&quot; &quot;82&quot; &quot;77&quot; &quot;77&quot; &quot;76&quot; &quot;74&quot; &quot;76&quot; &quot;76&quot;
+[67] &quot;79&quot; &quot;82&quot; &quot;76&quot; &quot;80&quot; &quot;76&quot; &quot;74&quot; &quot;82&quot; &quot;79&quot; &quot;81&quot; &quot;79&quot; &quot;74&quot;
+[78] &quot;82&quot; &quot;77&quot; &quot;76&quot; &quot;83&quot; &quot;77&quot; &quot;79&quot; &quot;81&quot; &quot;79&quot; &quot;79&quot; &quot;82&quot; &quot;79&quot;
+[89] &quot;79&quot; &quot;79&quot; &quot;76&quot; &quot;76&quot; &quot;76&quot; &quot;77&quot; &quot;79&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0wMyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KcGxvdChjYXJzKQpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4gCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0wMyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYSA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9Im1vbnRoIikKYiA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9InF1YXJ0ZXIiKQpjIDwtIHNlcSh5bWQoIjIwMDEtMDEtMDEiKSx5bWQoIjIwMTgtMDktMDEiKSxieT0ieWVhciIpCmBgYAoKYGBge3J9Cmh3IDwtICJIYWRsZXkgV2lja2hhbSIKbGlicmFyeShzdHJpbmdyKQoKc3RyX3N1YihodywgZW5kID0gNikKc3RyX3N1YihodywgOCwgMTQpCnN0cl9zdWIoaHcsIDgpCnN0cl9zdWIoaHcsIGMoMSwgOCksIGMoNiwgMTQpKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpzdHVkZW50SUQgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL3N0dWRlbnRJRC5jc3YiKQpgYGAKCmBgYHtyfQpzdHJfc3ViKHN0dWRlbnRJRCTlrbjomZ8sNSw2KQpgYGAKCgoK</div>
 
 
 

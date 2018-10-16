@@ -178,19 +178,9 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
-<pre class="r"><code>library(lubridate)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
-<pre><code>
-Attaching package: ‘lubridate’
-
-The following object is masked from ‘package:base’:
-
-    date</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBzZXEoeW1kKFwiMjAwMS0wMS0wMVwiKSx5bWQoXCIyMDE4LTA5LTAxXCIpLGJ5PVwibW9udGhcIilcbmIgPC0gc2VxKHltZChcIjIwMDEtMDEtMDFcIikseW1kKFwiMjAxOC0wOS0wMVwiKSxieT1cInF1YXJ0ZXJcIilcbmMgPC0gc2VxKHltZChcIjIwMDEtMDEtMDFcIikseW1kKFwiMjAxOC0wOS0wMVwiKSxieT1cInllYXJcIilcbmBgYCJ9 -->
-<pre class="r"><code>a &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;month&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5hIDwtIHNlcSh5bWQoXCIyMDAxLTAxLTAxXCIpLHltZChcIjIwMTgtMDktMDFcIiksYnk9XCJtb250aFwiKVxuYiA8LSBzZXEoeW1kKFwiMjAwMS0wMS0wMVwiKSx5bWQoXCIyMDE4LTA5LTAxXCIpLGJ5PVwicXVhcnRlclwiKVxuYyA8LSBzZXEoeW1kKFwiMjAwMS0wMS0wMVwiKSx5bWQoXCIyMDE4LTA5LTAxXCIpLGJ5PVwieWVhclwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(lubridate)
+a &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;month&quot;)
 b &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;quarter&quot;)
 c &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;year&quot;)</code></pre>
 <!-- rnb-source-end -->
@@ -219,25 +209,111 @@ studentID &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/githu
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3N1YihzdHVkZW50SUQk5a246JmfLDUsNilcbmBgYCJ9 -->
-<pre class="r"><code>str_sub(studentID$學號,5,6)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzdHJpbmdyKVxuc3RyX3N1YihzdHVkZW50SUQk5a246JmfLDUsNikgLT4gYlxudGFibGUoYilcbmBgYCJ9 -->
+<pre class="r"><code>library(stringr)
+str_sub(studentID$學號,5,6) -&gt; b
+table(b)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIjc3XCIgXCI3NlwiIFwiNzRcIiBcIjc3XCIgXCI4MlwiIFwiNzZcIiBcIjc0XCIgXCI3N1wiIFwiODFcIiBcIjc3XCIgXCI4MFwiXG5bMTJdIFwiNzlcIiBcIjc2XCIgXCI3MVwiIFwiNzRcIiBcIjc3XCIgXCI4MFwiIFwiNzRcIiBcIjc3XCIgXCI3NlwiIFwiNzdcIiBcIjc5XCJcblsyM10gXCI3OVwiIFwiODBcIiBcIjc0XCIgXCI3NFwiIFwiNzlcIiBcIjc2XCIgXCI4MFwiIFwiNzRcIiBcIjc2XCIgXCI3NFwiIFwiNzdcIlxuWzM0XSBcIjc5XCIgXCI4MVwiIFwiOTFcIiBcIjc2XCIgXCI3N1wiIFwiNzdcIiBcIjgyXCIgXCI3OVwiIFwiNzZcIiBcIjc5XCIgXCI4MlwiXG5bNDVdIFwiODJcIiBcIjc2XCIgXCI4MVwiIFwiNzlcIiBcIjc0XCIgXCI3NlwiIFwiODJcIiBcIjc2XCIgXCI4MlwiIFwiODJcIiBcIjgxXCJcbls1Nl0gXCI4MFwiIFwiODFcIiBcIjgwXCIgXCI4MlwiIFwiODJcIiBcIjc3XCIgXCI3N1wiIFwiNzZcIiBcIjc0XCIgXCI3NlwiIFwiNzZcIlxuWzY3XSBcIjc5XCIgXCI4MlwiIFwiNzZcIiBcIjgwXCIgXCI3NlwiIFwiNzRcIiBcIjgyXCIgXCI3OVwiIFwiODFcIiBcIjc5XCIgXCI3NFwiXG5bNzhdIFwiODJcIiBcIjc3XCIgXCI3NlwiIFwiODNcIiBcIjc3XCIgXCI3OVwiIFwiODFcIiBcIjc5XCIgXCI3OVwiIFwiODJcIiBcIjc5XCJcbls4OV0gXCI3OVwiIFwiNzlcIiBcIjc2XCIgXCI3NlwiIFwiNzZcIiBcIjc3XCIgXCI3OVwiXG4ifQ== -->
-<pre><code> [1] &quot;77&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot; &quot;82&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot; &quot;81&quot; &quot;77&quot; &quot;80&quot;
-[12] &quot;79&quot; &quot;76&quot; &quot;71&quot; &quot;74&quot; &quot;77&quot; &quot;80&quot; &quot;74&quot; &quot;77&quot; &quot;76&quot; &quot;77&quot; &quot;79&quot;
-[23] &quot;79&quot; &quot;80&quot; &quot;74&quot; &quot;74&quot; &quot;79&quot; &quot;76&quot; &quot;80&quot; &quot;74&quot; &quot;76&quot; &quot;74&quot; &quot;77&quot;
-[34] &quot;79&quot; &quot;81&quot; &quot;91&quot; &quot;76&quot; &quot;77&quot; &quot;77&quot; &quot;82&quot; &quot;79&quot; &quot;76&quot; &quot;79&quot; &quot;82&quot;
-[45] &quot;82&quot; &quot;76&quot; &quot;81&quot; &quot;79&quot; &quot;74&quot; &quot;76&quot; &quot;82&quot; &quot;76&quot; &quot;82&quot; &quot;82&quot; &quot;81&quot;
-[56] &quot;80&quot; &quot;81&quot; &quot;80&quot; &quot;82&quot; &quot;82&quot; &quot;77&quot; &quot;77&quot; &quot;76&quot; &quot;74&quot; &quot;76&quot; &quot;76&quot;
-[67] &quot;79&quot; &quot;82&quot; &quot;76&quot; &quot;80&quot; &quot;76&quot; &quot;74&quot; &quot;82&quot; &quot;79&quot; &quot;81&quot; &quot;79&quot; &quot;74&quot;
-[78] &quot;82&quot; &quot;77&quot; &quot;76&quot; &quot;83&quot; &quot;77&quot; &quot;79&quot; &quot;81&quot; &quot;79&quot; &quot;79&quot; &quot;82&quot; &quot;79&quot;
-[89] &quot;79&quot; &quot;79&quot; &quot;76&quot; &quot;76&quot; &quot;76&quot; &quot;77&quot; &quot;79&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiYlxuNzEgNzQgNzYgNzcgNzkgODAgODEgODIgODMgOTEgXG4gMSAxMiAyMCAxNSAxOCAgNyAgNyAxMyAgMSAgMSBcbiJ9 -->
+<pre><code>b
+71 74 76 77 79 80 81 82 83 91 
+ 1 12 20 15 18  7  7 13  1  1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTEVUVEVSU1xubGV0dGVyc1xuYGBgIn0= -->
+<pre class="r"><code>LETTERS
+letters</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MobGV0dGVycyxMRVRURVJTKVxuc3RyX2MobGV0dGVycyxMRVRURVJTLHNlcD1cIi1cIilcbnN0cl9jKFwibG93ZXJjYXNlOiBcIiwgbGV0dGVycywgXCIsIGNhcGl0YWw6IFwiLCBMRVRURVJTKVxuYGBgIn0= -->
+<pre class="r"><code>str_c(letters,LETTERS)
+str_c(letters,LETTERS,sep=&quot;-&quot;)
+str_c(&quot;lowercase: &quot;, letters, &quot;, capital: &quot;, LETTERS)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmdpdGh1YkRhdGEgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9naXRodWJEYXRhLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+githubData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2l0aHViRGF0YVtjKDIsMyw0KSxdIC0+IHNhbXBsZUdpdGh1Ylxuc3RyX2Moc2FtcGxlR2l0aHViJGBHaXRIdWIgdXNlcm5hbWVgLFxuICAgICAgc2FtcGxlR2l0aHViJGBHaXRIdWIgcmVwbyBuYW1lYClcbmBgYCJ9 -->
+<pre class="r"><code>githubData[c(2,3,4),] -&gt; sampleGithub
+str_c(sampleGithub$`GitHub username`,
+      sampleGithub$`GitHub repo name`)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic2hpaGhhbkNoaXVpbmNsYXNzUHJhY3RpY2VcIiBcIllpeHVhbld1dWRhdGEtc2NpZW5jZVwiICAgICBcblszXSBcInN1bm56ZW5naW5DbGFzcy1QcmFjdGljZVwiICBcbiJ9 -->
+<pre><code>[1] &quot;shihhanChiuinclassPractice&quot; &quot;YixuanWuudata-science&quot;     
+[3] &quot;sunnzenginClass-Practice&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MoXCJodHRwczovL2dpdGh1Yi5jb20vXCIsXG4gICAgICBzYW1wbGVHaXRodWIkYEdpdEh1YiB1c2VybmFtZWAsXG4gICAgICBcIi9cIixcbiAgICAgIHNhbXBsZUdpdGh1YiRgR2l0SHViIHJlcG8gbmFtZWApXG5gYGAifQ== -->
+<pre class="r"><code>str_c(&quot;https://github.com/&quot;,
+      sampleGithub$`GitHub username`,
+      &quot;/&quot;,
+      sampleGithub$`GitHub repo name`)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaHR0cHM6Ly9naXRodWIuY29tL3NoaWhoYW5DaGl1L2luY2xhc3NQcmFjdGljZVwiXG5bMl0gXCJodHRwczovL2dpdGh1Yi5jb20vWWl4dWFuV3V1L2RhdGEtc2NpZW5jZVwiICAgICBcblszXSBcImh0dHBzOi8vZ2l0aHViLmNvbS9zdW5uemVuZy9pbkNsYXNzLVByYWN0aWNlXCIgIFxuIn0= -->
+<pre><code>[1] &quot;https://github.com/shihhanChiu/inclassPractice&quot;
+[2] &quot;https://github.com/YixuanWuu/data-science&quot;     
+[3] &quot;https://github.com/sunnzeng/inClass-Practice&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmZpbG1Wb3RpbmdEYXRhIDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS8lRTclQUMlQUMlRTQlQjglODklRTUlQjElODYlRTclQjYlOTMlRTYlQkYlOUYlRTYlOTIlQUQlRTUlQUUlQTIlRTclQUIlQjYlRTglQjMlQkQlRTUlOEYlODMlRTglQjMlQkQlRTQlQkQlOUMlRTUlOTMlODElRTYlOEElOTUlRTclQTUlQTglRTclQjUlOTAlRTYlOUUlOUMlRTYlQTglQTMlRTYlOUMlQUMlMjAtJTIwU2hlZXQxLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+filmVotingData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/%E7%AC%AC%E4%B8%89%E5%B1%86%E7%B6%93%E6%BF%9F%E6%92%AD%E5%AE%A2%E7%AB%B6%E8%B3%BD%E5%8F%83%E8%B3%BD%E4%BD%9C%E5%93%81%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C%E6%A8%A3%E6%9C%AC%20-%20Sheet1.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzdHJpbmdyKVxuc3RyX3N1YihmaWxtVm90aW5nRGF0YSRg5Ye655Sf6KW/5YWD5bm05pyI5pel77yI6amX6K2J5pys5Lq655So77yJYCkgLT5hYmNcbnRhYmxlKGFiYylcbmBgYCJ9 -->
+<pre class="r"><code>library(stringr)
+str_sub(filmVotingData$`出生西元年月日（驗證本人用）`) -&gt;abc
+table(abc)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZnJ1aXRzIDwtIGMoXG4gIFwiYXBwbGVzIGFuZCBvcmFuZ2VzIGFuZCBwZWFycyBhbmQgYmFuYW5hc1wiLFxuICBcInBpbmVhcHBsZXMgYW5kIG1hbmdvcyBhbmQgZ3VhdmFzXCJcbilcbnN0cl9zcGxpdF9maXhlZChmcnVpdHMsIFwiIGFuZCBcIiwgMylcbmBgYCJ9 -->
+<pre class="r"><code>fruits &lt;- c(
+  &quot;apples and oranges and pears and bananas&quot;,
+  &quot;pineapples and mangos and guavas&quot;
+)
+str_split_fixed(fruits, &quot; and &quot;, 3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdICAgICAgICAgWywyXSAgICAgIFssM10gICAgICAgICAgICAgICBcblsxLF0gXCJhcHBsZXNcIiAgICAgXCJvcmFuZ2VzXCIgXCJwZWFycyBhbmQgYmFuYW5hc1wiXG5bMixdIFwicGluZWFwcGxlc1wiIFwibWFuZ29zXCIgIFwiZ3VhdmFzXCIgICAgICAgICAgIFxuIn0= -->
+<pre><code>     [,1]         [,2]      [,3]               
+[1,] &quot;apples&quot;     &quot;oranges&quot; &quot;pears and bananas&quot;
+[2,] &quot;pineapples&quot; &quot;mangos&quot;  &quot;guavas&quot;           </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3NwbGl0X2ZpeGVkKGZydWl0cywgXCIgYW5kIFwiLCA0KVxuYGBgIn0= -->
+<pre class="r"><code>str_split_fixed(fruits, &quot; and &quot;, 4)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdICAgICAgICAgWywyXSAgICAgIFssM10gICAgIFssNF0gICAgIFxuWzEsXSBcImFwcGxlc1wiICAgICBcIm9yYW5nZXNcIiBcInBlYXJzXCIgIFwiYmFuYW5hc1wiXG5bMixdIFwicGluZWFwcGxlc1wiIFwibWFuZ29zXCIgIFwiZ3VhdmFzXCIgXCJcIiAgICAgICBcbiJ9 -->
+<pre><code>     [,1]         [,2]      [,3]     [,4]     
+[1,] &quot;apples&quot;     &quot;oranges&quot; &quot;pears&quot;  &quot;bananas&quot;
+[2,] &quot;pineapples&quot; &quot;mangos&quot;  &quot;guavas&quot; &quot;&quot;       </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0wMyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYSA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9Im1vbnRoIikKYiA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9InF1YXJ0ZXIiKQpjIDwtIHNlcSh5bWQoIjIwMDEtMDEtMDEiKSx5bWQoIjIwMTgtMDktMDEiKSxieT0ieWVhciIpCmBgYAoKYGBge3J9Cmh3IDwtICJIYWRsZXkgV2lja2hhbSIKbGlicmFyeShzdHJpbmdyKQoKc3RyX3N1YihodywgZW5kID0gNikKc3RyX3N1YihodywgOCwgMTQpCnN0cl9zdWIoaHcsIDgpCnN0cl9zdWIoaHcsIGMoMSwgOCksIGMoNiwgMTQpKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpzdHVkZW50SUQgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL3N0dWRlbnRJRC5jc3YiKQpgYGAKCmBgYHtyfQpzdHJfc3ViKHN0dWRlbnRJRCTlrbjomZ8sNSw2KQpgYGAKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0wMyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpsaWJyYXJ5KGx1YnJpZGF0ZSkKYSA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9Im1vbnRoIikKYiA8LSBzZXEoeW1kKCIyMDAxLTAxLTAxIikseW1kKCIyMDE4LTA5LTAxIiksYnk9InF1YXJ0ZXIiKQpjIDwtIHNlcSh5bWQoIjIwMDEtMDEtMDEiKSx5bWQoIjIwMTgtMDktMDEiKSxieT0ieWVhciIpCmBgYAoKYGBge3J9Cmh3IDwtICJIYWRsZXkgV2lja2hhbSIKbGlicmFyeShzdHJpbmdyKQoKc3RyX3N1YihodywgZW5kID0gNikKc3RyX3N1YihodywgOCwgMTQpCnN0cl9zdWIoaHcsIDgpCnN0cl9zdWIoaHcsIGMoMSwgOCksIGMoNiwgMTQpKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpzdHVkZW50SUQgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL3N0dWRlbnRJRC5jc3YiKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHN0cmluZ3IpCnN0cl9zdWIoc3R1ZGVudElEJOWtuOiZnyw1LDYpIC0+IGIKdGFibGUoYikKYGBgCgpgYGB7cn0KTEVUVEVSUwpsZXR0ZXJzCmBgYAoKYGBge3J9CnN0cl9jKGxldHRlcnMsTEVUVEVSUykKc3RyX2MobGV0dGVycyxMRVRURVJTLHNlcD0iLSIpCnN0cl9jKCJsb3dlcmNhc2U6ICIsIGxldHRlcnMsICIsIGNhcGl0YWw6ICIsIExFVFRFUlMpCmBgYAoKYGBge3J9CmxpYnJhcnkocmVhZHIpCmdpdGh1YkRhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2dpdGh1YkRhdGEuY3N2IikKYGBgCgpgYGB7cn0KZ2l0aHViRGF0YVtjKDIsMyw0KSxdIC0+IHNhbXBsZUdpdGh1YgpzdHJfYyhzYW1wbGVHaXRodWIkYEdpdEh1YiB1c2VybmFtZWAsCiAgICAgIHNhbXBsZUdpdGh1YiRgR2l0SHViIHJlcG8gbmFtZWApCnN0cl9jKCJodHRwczovL2dpdGh1Yi5jb20vIiwKICAgICAgc2FtcGxlR2l0aHViJGBHaXRIdWIgdXNlcm5hbWVgLAogICAgICAiLyIsCiAgICAgIHNhbXBsZUdpdGh1YiRgR2l0SHViIHJlcG8gbmFtZWApCmBgYAoKYGBge3J9CmxpYnJhcnkocmVhZHIpCmZpbG1Wb3RpbmdEYXRhIDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2NvdXJzZS0xMDctMS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlL21hc3Rlci9kYXRhLyVFNyVBQyVBQyVFNCVCOCU4OSVFNSVCMSU4NiVFNyVCNiU5MyVFNiVCRiU5RiVFNiU5MiVBRCVFNSVBRSVBMiVFNyVBQiVCNiVFOCVCMyVCRCVFNSU4RiU4MyVFOCVCMyVCRCVFNCVCRCU5QyVFNSU5MyU4MSVFNiU4QSU5NSVFNyVBNSVBOCVFNyVCNSU5MCVFNiU5RSU5QyVFNiVBOCVBMyVFNiU5QyVBQyUyMC0lMjBTaGVldDEuY3N2IikKYGBgCgpgYGB7cn0KbGlicmFyeShzdHJpbmdyKQpzdHJfc3ViKGZpbG1Wb3RpbmdEYXRhJGDlh7rnlJ/opb/lhYPlubTmnIjml6XvvIjpqZforYnmnKzkurrnlKjvvIlgKSAtPmFiYwp0YWJsZShhYmMpCmBgYAoKYGBge3J9CmZydWl0cyA8LSBjKAogICJhcHBsZXMgYW5kIG9yYW5nZXMgYW5kIHBlYXJzIGFuZCBiYW5hbmFzIiwKICAicGluZWFwcGxlcyBhbmQgbWFuZ29zIGFuZCBndWF2YXMiCikKc3RyX3NwbGl0X2ZpeGVkKGZydWl0cywgIiBhbmQgIiwgMykKc3RyX3NwbGl0X2ZpeGVkKGZydWl0cywgIiBhbmQgIiwgNCkKYGBgCgoKCg==</div>
 
 
 

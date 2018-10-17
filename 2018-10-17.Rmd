@@ -44,3 +44,19 @@ str_replace_all(fruits, "[aeiou]", toupper)
 str_replace_all(fruits, "b", NA_character_)
 ```
 
+```{r}
+install.packages('googlesheets')
+library(googlesheets)
+```
+
+```{r}
+googlesheets::gs_auth()
+gs_auth(new_user = TRUE)
+```
+
+```{r}
+gsSurvey<-gs_key("1mC9bnxj11NCNoOCw0Vmn4nxERbHtLjeGo9v9C9b2GDE")  #download sheet information as an object
+classSurvey<-gs_read(gsSurvey,ws=1) #access the 1st worksheet
+```
+
+

@@ -135,16 +135,39 @@ classSurvey[classSurvey$性別 == "男" &
 
 ```{r}
 library(stringr)
-place <- factor(classSurvey$居住地行政區)
-str_sub(place,1,2)
-classSurvey[str_sub(place,1,2) =="新北",3]
+str_sub(classSurvey$居住地行政區,1,2)
+classSurvey[str_sub(classSurvey$居住地行政區,1,2) =="新北",3]
 ```
 
 ```{r}
 library(stringr)
-place <- factor(classSurvey$居住地行政區)
-str_sub(place,1,2)
-classSurvey[str_sub(place,1,2) =="台北",3]
+str_sub(classSurvey$居住地行政區,1,2)
+classSurvey[str_sub(classSurvey$居住地行政區,1,2) =="台北",3]
 ```
 
+```{r}
+StuDF$StuID
+StuDF[,c("StuID")]
+StuDF$name
+StuDF[,c("name")]
+```
+
+```{r}
+StuDF[,c("StuID","name")]
+
+## 無法用$一次取兩個元素
+# StuDF$c("StuID","name")
+```
+
+```{r}
+StuDF[c(1,4),c(2)]
+StuDF[,c(2)][c(1,4)]
+
+## the second one is equivalent to 
+StuDF[,c(2)] -> aa
+aa[c(1,4)] 
+```
+
+```{r}
+```
 

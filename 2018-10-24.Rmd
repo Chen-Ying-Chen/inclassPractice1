@@ -29,6 +29,17 @@ gsSurvey<-gs_key("1mC9bnxj11NCNoOCw0Vmn4nxERbHtLjeGo9v9C9b2GDE")  #download shee
 classSurvey<-gs_read(gsSurvey,ws=1) #access the 1st worksheet
 ```
 
+
+```{r}
+aa <- (classSurvey$性別 == "男")
+
+bb <- (classSurvey$本學期學分數 > 20)
+
+cc <- (classSurvey$性別 == "男" | 
+    classSurvey$本學期學分數 > 20)
+```
+
+#StuDF practice
 ```{r}
 StuDF <- data.frame(
   StuID=c(1,2,3,4,5),
@@ -48,10 +59,6 @@ colnames(StuDF)
 rownames(StuDF)
 ```
 
-```{r}
-(StuDF$score >= 80)
-(StuDF$name=="小新")
-```
 
 ```{r}
 rownames(classSurvey)
@@ -109,4 +116,35 @@ StuDF[c(T,F,F,T,F),c(F,T,T,F,F)]
 ```{r}
 StuDF[c(1,4),c(2,3)]
 ```
+
+```{r}
+(StuDF$score >= 80)
+(StuDF$name == "小新")
+```
+
+```{r}
+StuDF[StuDF$score >= 80,2]
+StuDF[StuDF$name == "小新",3]
+```
+
+```{r}
+library(stringr)
+classSurvey[classSurvey$性別 == "男" & 
+    classSurvey$本學期學分數>26,3]
+```
+
+```{r}
+library(stringr)
+place <- factor(classSurvey$居住地行政區)
+str_sub(place,1,2)
+classSurvey[str_sub(place,1,2) =="新北",3]
+```
+
+```{r}
+library(stringr)
+place <- factor(classSurvey$居住地行政區)
+str_sub(place,1,2)
+classSurvey[str_sub(place,1,2) =="台北",3]
+```
+
 

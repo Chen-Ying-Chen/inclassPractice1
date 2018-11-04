@@ -190,10 +190,44 @@ gs_auth(new_user = TRUE)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3NTdXJ2ZXk8LWdzX2tleShcIjFtQzlibnhqMTFOQ05vT0N3MFZtbjRueEVSYkh0TGplR285djlDOWIyR0RFXCIpICAjZG93bmxvYWQgc2hlZXQgaW5mb3JtYXRpb24gYXMgYW4gb2JqZWN0XG5jbGFzc1N1cnZleTwtZ3NfcmVhZChnc1N1cnZleSx3cz0xKSAjYWNjZXNzIHRoZSAxc3Qgd29ya3NoZWV0XG5gYGAifQ== -->
-<pre class="r"><code>gsSurvey&lt;-gs_key(&quot;1mC9bnxj11NCNoOCw0Vmn4nxERbHtLjeGo9v9C9b2GDE&quot;)  #download sheet information as an object
-classSurvey&lt;-gs_read(gsSurvey,ws=1) #access the 1st worksheet</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3NTdXJ2ZXk8LWdzX2tleShcIjFtQzlibnhqMTFOQ05vT0N3MFZtbjRueEVSYkh0TGplR285djlDOWIyR0RFXCIpICAjZG93bmxvYWQgc2hlZXQgaW5mb3JtYXRpb24gYXMgYW4gb2JqZWN0XG5gYGAifQ== -->
+<pre class="r"><code>gsSurvey&lt;-gs_key(&quot;1mC9bnxj11NCNoOCw0Vmn4nxERbHtLjeGo9v9C9b2GDE&quot;)  #download sheet information as an object</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2hlZXQgc3VjY2Vzc2Z1bGx5IGlkZW50aWZpZWQ6IFwi5YWo54+t6YCa6KiK6YyEIChSZXNwb25zZXMpXCJcbiJ9 -->
+<pre><code>Sheet successfully identified: &quot;全班通訊錄 (Responses)&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3NTdXJ2ZXk8LWdzX3JlYWQoZ3NTdXJ2ZXksd3M9MSkgI2FjY2VzcyB0aGUgMXN0IHdvcmtzaGVldFxuYGBgIn0= -->
+<pre class="r"><code>classSurvey&lt;-gs_read(gsSurvey,ws=1) #access the 1st worksheet</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQWNjZXNzaW5nIHdvcmtzaGVldCB0aXRsZWQgJ0Zvcm0gUmVzcG9uc2VzIDEnLlxuIn0= -->
+<pre><code>Accessing worksheet titled 'Form Responses 1'.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5Eb3dubG9hZGluZzogMS4yIGtCICAgICBcbkRvd25sb2FkaW5nOiAxLjIga0IgICAgIFxuRG93bmxvYWRpbmc6IDIuMiBrQiAgICAgXG5Eb3dubG9hZGluZzogMi4yIGtCICAgICBcbkRvd25sb2FkaW5nOiAyLjMga0IgICAgIFxuRG93bmxvYWRpbmc6IDIuMyBrQiAgICAgXG5Eb3dubG9hZGluZzogMi4zIGtCICAgICBcbkRvd25sb2FkaW5nOiAyLjMga0IgICAgIFxuRG93bmxvYWRpbmc6IDIuMyBrQiAgICAgXG5Eb3dubG9hZGluZzogMi4zIGtCICAgICBcbiJ9 -->
+<pre><code>
+Downloading: 1.2 kB     
+Downloading: 1.2 kB     
+Downloading: 2.2 kB     
+Downloading: 2.2 kB     
+Downloading: 2.3 kB     
+Downloading: 2.3 kB     
+Downloading: 2.3 kB     
+Downloading: 2.3 kB     
+Downloading: 2.3 kB     
+Downloading: 2.3 kB     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBUaW1lc3RhbXAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIGBFbWFpbCBBZGRyZXNzYCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAg5aeT5ZCNID0gY29sX2NoYXJhY3RlcigpLFxuICDlrbjomZ8gPSBjb2xfaW50ZWdlcigpLFxuICDlsYXkvY/lnLDooYzmlL/ljYAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIOaAp+WIpSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAg5pys5a245pyf5a245YiG5pW4ID0gY29sX2ludGVnZXIoKSxcbiAg5pys5a245pyf55uu5YmN5bey5Y+D5Yqg5LmL6Kqy5aSW5rS75YuVID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
+<pre><code>Parsed with column specification:
+cols(
+  Timestamp = col_character(),
+  `Email Address` = col_character(),
+  姓名 = col_character(),
+  學號 = col_integer(),
+  居住地行政區 = col_character(),
+  性別 = col_character(),
+  本學期學分數 = col_integer(),
+  本學期目前已參加之課外活動 = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="studf-practice" class="section level1">
@@ -301,10 +335,58 @@ levels(student$新身高級距)[1:3] &lt;- &quot;(0,160]&quot;</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="teachers-answers" class="section level1">
+<h1>Teacher’s Answers</h1>
+<p>1.2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoY2xhc3NTdXJ2ZXkk5a246JmfKVxuIyDlrbjomZ/ovYnmiJBjaGFyYWN0ZXJcbmNsYXNzU3VydmV5JOWtuOiZnyA8LSBhcy5jaGFyYWN0ZXIoY2xhc3NTdXJ2ZXkk5a246JmfKVxuIyDlrbjomZ/lj5blh7rlrZfkuLLnrKwyLTTkvY0g5a2Y5oiQIOW5tOe0mlxubGlicmFyeShzdHJpbmdyKVxuY2xhc3NTdXJ2ZXkk5bm057SaIDwtIHN0cl9zdWIoY2xhc3NTdXJ2ZXkk5a246JmfLDIsNClcbiMg5bm057SaIOi9iSBmYWN0b3JcbmNsYXNzU3VydmV5JOW5tOe0miA8LSBhcy5mYWN0b3IoY2xhc3NTdXJ2ZXkk5bm057SaKVxuIyDlubTntJrpgLLooYwgZ2VuZXJpYyByZXBsYWNlbWVudFxubGV2ZWxzKGNsYXNzU3VydmV5JOW5tOe0mikgPC0gYyhcIuWkp+Wbm+WPiuS7peS4ilwiLFwi5aSn5LiJXCIsXCLlpKfkuoxcIixcIuWkp+S4gFwiKVxuYGBgIn0= -->
+<pre class="r"><code>class(classSurvey$學號)
+# 學號轉成character
+classSurvey$學號 &lt;- as.character(classSurvey$學號)
+# 學號取出字串第2-4位 存成 年級
+library(stringr)
+classSurvey$年級 &lt;- str_sub(classSurvey$學號,2,4)
+# 年級 轉 factor
+classSurvey$年級 &lt;- as.factor(classSurvey$年級)
+# 年級進行 generic replacement
+levels(classSurvey$年級) &lt;- c(&quot;大四及以上&quot;,&quot;大三&quot;,&quot;大二&quot;,&quot;大一&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>1.6 大一課外活動的統計</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI+evqeWHuuWkp+S4gOaoo+acrFxuRnJlc2hBY3Rpdml0eSA8LSBjbGFzc1N1cnZleSTmnKzlrbjmnJ/nm67liY3lt7Llj4PliqDkuYvoqrLlpJbmtLvli5VbKGNsYXNzU3VydmV5JOW5tOe0mj09XCLlpKfkuIBcIildXG50YWJsZShGcmVzaEFjdGl2aXR5KVxuYGBgIn0= -->
+<pre class="r"><code>#篩出大一樣本
+FreshActivity &lt;- classSurvey$本學期目前已參加之課外活動[(classSurvey$年級==&quot;大一&quot;)]
+table(FreshActivity)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRnJlc2hBY3Rpdml0eVxuICAgICAgICAgICAgICAgICAgICAgIOaJk+W3pSAgICAgICAgICAgICAgICAgICAgIOWVpuWVpumaiiBcbiAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgIDEyIFxuICAgICAgICAgICAgICDllabllabpmoosIOaJk+W3pSDllabllabpmoosIOeUt+aOkueQg+e2kyjliqDnkIPntpMhISkgXG4gICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAg5ZWm5ZWm6ZqKLCDns7vmjpIgICAgICAgICAgICAgICDllabllabpmoosIOezu+e+vSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAzICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICDllabllabpmoosIOezu+ahjCAgICAgICAgICAgICAgIOWVpuWVpumaiiwg5a245pyDIFxuICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAg56S+5ZyYICAgICAgICAgICAgICAgICDnpL7lnJgsIOaJk+W3pSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICDnpL7lnJgsIOWVpuWVpumaiiAgICAgICAgICAgICAgICAgICAgICAgICDnhKEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgMyAgICAgICAgICAgICAgICAgICAgICAgICAxMCBcbiJ9 -->
+<pre><code>FreshActivity
+                      打工                     啦啦隊 
+                         4                         12 
+              啦啦隊, 打工 啦啦隊, 男排球經(加球經!!) 
+                         5                          1 
+              啦啦隊, 系排               啦啦隊, 系羽 
+                         3                          1 
+              啦啦隊, 系桌               啦啦隊, 學會 
+                         1                          1 
+                      社團                 社團, 打工 
+                         2                          2 
+              社團, 啦啦隊                         無 
+                         3                         10 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI+mHneWwjeWwj+aoo+acrOeahOiqsuWklua0u+WLleWOu+e1seioiFxuYGBgIn0= -->
+<pre class="r"><code>#針對小樣本的課外活動去統計</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0zMSIKb3V0cHV0OiBodG1sX25vdGVib29rCmF1dGhvcjogIumZs+ebiOiTgSIKLS0tCgoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoJ2dvb2dsZXNoZWV0cycpCmxpYnJhcnkoZ29vZ2xlc2hlZXRzKQpnb29nbGVzaGVldHM6OmdzX2F1dGgoKQpnc19hdXRoKG5ld191c2VyID0gVFJVRSkKYGBgCgoKCmBgYHtyfQpnc1N1cnZleTwtZ3Nfa2V5KCIxbUM5Ym54ajExTkNOb09DdzBWbW40bnhFUmJIdExqZUdvOXY5QzliMkdERSIpICAjZG93bmxvYWQgc2hlZXQgaW5mb3JtYXRpb24gYXMgYW4gb2JqZWN0CmNsYXNzU3VydmV5PC1nc19yZWFkKGdzU3VydmV5LHdzPTEpICNhY2Nlc3MgdGhlIDFzdCB3b3Jrc2hlZXQKYGBgCgoKI1N0dURGIHByYWN0aWNlCmBgYHtyfQpTdHVERiA8LSBkYXRhLmZyYW1lKAogIFN0dUlEPWMoMSwyLDMsNCw1KSwKICBuYW1lPWMoIuWwj+aYjiIsIuWkp+mbhCIsIuiDluiZjiIsIuWwj+aWsCIsIuWkp+eZvSIpLAogIHNjb3JlPWMoODAsNjAsOTAsNzAsNTApLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCiAgKQpTdHVERiAKYGBgCgpgYGB7cn0KbmFtZXMoZ3NTdXJ2ZXkpCmBgYAoKYGBge3J9CmdzU3VydmV5JGxpbmtzJHR5cGUKYGBgCgpgYGB7cn0KbmFtZXMoU3R1REYpWzJdIDwtIGMoIuWnk+WQjSIpCm5hbWVzKFN0dURGKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpzdHVkZW50IDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2NvdXJzZS0xMDctMS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlL21hc3Rlci9kYXRhL3N0dWRlbnQuY3N2IikKbGlicmFyeShkcGx5cikKbGlicmFyeShtYWdyaXR0cikKc3R1ZGVudCAlPD4lIG11dGF0ZSgKICDouqvpq5jntJrot509Y3V0KOi6q+mrmCxjKDAsMTUwLDE1NSwxNjAsMTY1LDE3MCwxNzUsMTgwLDE4NSwyMDApKSkKYGBgCgpgYGB7cn0KbGV2ZWxzKHN0dWRlbnQk6Lqr6auY57Sa6LedKSA8LSBjKCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLkuK3nrYnlgIvlrZAiLCLkuK3nrYnlgIvlrZAiLCLpq5jlgIvlrZAiLCLpq5jlgIvlrZAiKQpgYGAKCgpgYGB7cn0KbGlicmFyeShyZWFkcikKc3R1ZGVudCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS9zdHVkZW50LmNzdiIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkobWFncml0dHIpCnN0dWRlbnQgJTw+JSBtdXRhdGUoCiAg6Lqr6auY57Sa6LedPWN1dCjouqvpq5gsYygwLDE1MCwxNTUsMTYwLDE2NSwxNzAsMTc1LDE4MCwxODUsMjAwKSkpCgpgYGAKCmBgYHtyfQpzdHVkZW50JOaWsOi6q+mrmOe0mui3nSA8LSBzdHVkZW50JOi6q+mrmOe0mui3nQpsZXZlbHMoc3R1ZGVudCTmlrDouqvpq5jntJrot50pWzE6M10gPC0gIigwLDE2MF0iCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMC0zMSIKb3V0cHV0OiBodG1sX25vdGVib29rCmF1dGhvcjogIumZs+ebiOiTgSIKLS0tCgoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoJ2dvb2dsZXNoZWV0cycpCmxpYnJhcnkoZ29vZ2xlc2hlZXRzKQpnb29nbGVzaGVldHM6OmdzX2F1dGgoKQpnc19hdXRoKG5ld191c2VyID0gVFJVRSkKYGBgCgoKCmBgYHtyfQpnc1N1cnZleTwtZ3Nfa2V5KCIxbUM5Ym54ajExTkNOb09DdzBWbW40bnhFUmJIdExqZUdvOXY5QzliMkdERSIpICAjZG93bmxvYWQgc2hlZXQgaW5mb3JtYXRpb24gYXMgYW4gb2JqZWN0CmNsYXNzU3VydmV5PC1nc19yZWFkKGdzU3VydmV5LHdzPTEpICNhY2Nlc3MgdGhlIDFzdCB3b3Jrc2hlZXQKYGBgCgoKI1N0dURGIHByYWN0aWNlCmBgYHtyfQpTdHVERiA8LSBkYXRhLmZyYW1lKAogIFN0dUlEPWMoMSwyLDMsNCw1KSwKICBuYW1lPWMoIuWwj+aYjiIsIuWkp+mbhCIsIuiDluiZjiIsIuWwj+aWsCIsIuWkp+eZvSIpLAogIHNjb3JlPWMoODAsNjAsOTAsNzAsNTApLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCiAgKQpTdHVERiAKYGBgCgpgYGB7cn0KbmFtZXMoZ3NTdXJ2ZXkpCmBgYAoKYGBge3J9CmdzU3VydmV5JGxpbmtzJHR5cGUKYGBgCgpgYGB7cn0KbmFtZXMoU3R1REYpWzJdIDwtIGMoIuWnk+WQjSIpCm5hbWVzKFN0dURGKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpzdHVkZW50IDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2NvdXJzZS0xMDctMS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlL21hc3Rlci9kYXRhL3N0dWRlbnQuY3N2IikKbGlicmFyeShkcGx5cikKbGlicmFyeShtYWdyaXR0cikKc3R1ZGVudCAlPD4lIG11dGF0ZSgKICDouqvpq5jntJrot509Y3V0KOi6q+mrmCxjKDAsMTUwLDE1NSwxNjAsMTY1LDE3MCwxNzUsMTgwLDE4NSwyMDApKSkKYGBgCgpgYGB7cn0KbGV2ZWxzKHN0dWRlbnQk6Lqr6auY57Sa6LedKSA8LSBjKCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLlsI/lgIvlrZAiLCLkuK3nrYnlgIvlrZAiLCLkuK3nrYnlgIvlrZAiLCLpq5jlgIvlrZAiLCLpq5jlgIvlrZAiKQpgYGAKCgpgYGB7cn0KbGlicmFyeShyZWFkcikKc3R1ZGVudCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS9zdHVkZW50LmNzdiIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkobWFncml0dHIpCnN0dWRlbnQgJTw+JSBtdXRhdGUoCiAg6Lqr6auY57Sa6LedPWN1dCjouqvpq5gsYygwLDE1MCwxNTUsMTYwLDE2NSwxNzAsMTc1LDE4MCwxODUsMjAwKSkpCgpgYGAKCmBgYHtyfQpzdHVkZW50JOaWsOi6q+mrmOe0mui3nSA8LSBzdHVkZW50JOi6q+mrmOe0mui3nQpsZXZlbHMoc3R1ZGVudCTmlrDouqvpq5jntJrot50pWzE6M10gPC0gIigwLDE2MF0iCmBgYAoKCgoKI1RlYWNoZXIncyBBbnN3ZXJzCjEuMgpgYGB7cn0KY2xhc3MoY2xhc3NTdXJ2ZXkk5a246JmfKQojIOWtuOiZn+i9ieaIkGNoYXJhY3RlcgpjbGFzc1N1cnZleSTlrbjomZ8gPC0gYXMuY2hhcmFjdGVyKGNsYXNzU3VydmV5JOWtuOiZnykKIyDlrbjomZ/lj5blh7rlrZfkuLLnrKwyLTTkvY0g5a2Y5oiQIOW5tOe0mgpsaWJyYXJ5KHN0cmluZ3IpCmNsYXNzU3VydmV5JOW5tOe0miA8LSBzdHJfc3ViKGNsYXNzU3VydmV5JOWtuOiZnywyLDQpCiMg5bm057SaIOi9iSBmYWN0b3IKY2xhc3NTdXJ2ZXkk5bm057SaIDwtIGFzLmZhY3RvcihjbGFzc1N1cnZleSTlubTntJopCiMg5bm057Sa6YCy6KGMIGdlbmVyaWMgcmVwbGFjZW1lbnQKbGV2ZWxzKGNsYXNzU3VydmV5JOW5tOe0mikgPC0gYygi5aSn5Zub5Y+K5Lul5LiKIiwi5aSn5LiJIiwi5aSn5LqMIiwi5aSn5LiAIikKYGBgCgoxLjYK5aSn5LiA6Kqy5aSW5rS75YuV55qE57Wx6KiICmBgYHtyfQoj56+p5Ye65aSn5LiA5qij5pysCkZyZXNoQWN0aXZpdHkgPC0gY2xhc3NTdXJ2ZXkk5pys5a245pyf55uu5YmN5bey5Y+D5Yqg5LmL6Kqy5aSW5rS75YuVWyhjbGFzc1N1cnZleSTlubTntJo9PSLlpKfkuIAiKV0KdGFibGUoRnJlc2hBY3Rpdml0eSkKI+mHneWwjeWwj+aoo+acrOeahOiqsuWklua0u+WLleWOu+e1seioiAoKCgpgYGAKCgoK</div>
 
 
 

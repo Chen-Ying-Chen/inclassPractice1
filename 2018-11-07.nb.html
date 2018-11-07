@@ -180,64 +180,34 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzdHJpbmdyKVxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzdHJpbmdyKVxubGlicmFyeShsdWJyaWRhdGUpXG7msJHlnIvlubTmnIg8LWMoXCIwOTkvMDFcIixcIjA5OS8wMlwiLFwiMDk5LzAzXCIpXG5cbiMgMVxuc3RyX2MoXCIxXCIs5rCR5ZyL5bm05pyILFwiLzAxXCIpLT7msJHlnIvlubTmnIhcblxuIyAyXG5sdWJyaWRhdGU6OnltZCjmsJHlnIvlubTmnIgpIC0+IOawkeWci+W5tOaciFxuXG4jIDNcbuawkeWci+W5tOaciCArIHllYXJzKDkxMSlcbmBgYCJ9 -->
 <pre class="r"><code>library(stringr)
-library(lubridate)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
-<pre><code>
-Attaching package: ‘lubridate’
+library(lubridate)
+民國年月&lt;-c(&quot;099/01&quot;,&quot;099/02&quot;,&quot;099/03&quot;)
 
-The following object is masked from ‘package:base’:
-
-    date</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxu5rCR5ZyL5bm05pyIPC1jKFwiMDk5LzAxXCIsXCIwOTkvMDJcIixcIjA5OS8wM1wiKVxuIyAxXG5zdHJfYyhcIjFcIizmsJHlnIvlubTmnIgsXCIvMDFcIiktPuawkeWci+W5tOaciFxuIyAyXG5sdWJyaWRhdGU6OnltZCjmsJHlnIvlubTmnIgpIC0+IOawkeWci+W5tOaciFxuIyAzXG7msJHlnIvlubTmnIggKyB5ZWFycyg5MTEpXG5gYGAifQ== -->
-<pre class="r"><code>民國年月&lt;-c(&quot;099/01&quot;,&quot;099/02&quot;,&quot;099/03&quot;)
 # 1
 str_c(&quot;1&quot;,民國年月,&quot;/01&quot;)-&gt;民國年月
+
 # 2
 lubridate::ymd(民國年月) -&gt; 民國年月
+
 # 3
 民國年月 + years(911)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxMC0wMS0wMVwiIFwiMjAxMC0wMi0wMVwiIFwiMjAxMC0wMy0wMVwiXG4ifQ== -->
-<pre><code>[1] &quot;2010-01-01&quot; &quot;2010-02-01&quot; &quot;2010-03-01&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxu5rCR5ZyL5bm05pyIPC1jKFwiMDk5LzAxXCIsXCIwOTkvMDJcIixcIjA5OS8wM1wiKVxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxu5rCR5ZyL5bm05pyIPC1jKFwiMDk5LzAxXCIsXCIwOTkvMDJcIixcIjA5OS8wM1wiKVxuXG5saWJyYXJ5KGRwbHlyKVxuIyAxXG7msJHlnIvlubTmnIggJT4lIFxuICBzdHJfYyhcIjFcIiwgLiAsXCIvMDFcIikgJT4lXG4gIHltZCAlPiVcbiAgeyAuICsgeWVhcnMoOTExKSB9XG5gYGAifQ== -->
 <pre class="r"><code>民國年月&lt;-c(&quot;099/01&quot;,&quot;099/02&quot;,&quot;099/03&quot;)
-library(dplyr)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmx1YnJpZGF0ZeKAmTpcblxuICAgIGludGVyc2VjdCwgc2V0ZGlmZiwgdW5pb25cblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
-<pre><code>
-Attaching package: ‘dplyr’
 
-The following objects are masked from ‘package:lubridate’:
-
-    intersect, setdiff, union
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAxXG7msJHlnIvlubTmnIggJT4lIFxuICBzdHJfYyhcIjFcIiwgLiAsXCIvMDFcIikgJT4lXG4gIHltZCAlPiVcbiAgeyAuICsgeWVhcnMoOTExKSB9XG5gYGAifQ== -->
-<pre class="r"><code># 1
+library(dplyr)
+# 1
 民國年月 %&gt;% 
   str_c(&quot;1&quot;, . ,&quot;/01&quot;) %&gt;%
   ymd %&gt;%
   { . + years(911) }</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxMC0wMS0wMVwiIFwiMjAxMC0wMi0wMVwiIFwiMjAxMC0wMy0wMVwiXG4ifQ== -->
-<pre><code>[1] &quot;2010-01-01&quot; &quot;2010-02-01&quot; &quot;2010-03-01&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
@@ -251,19 +221,6 @@ The following objects are masked from ‘package:base’:
 <pre class="r"><code>library(readr)
 collegeData &lt;- read_csv(&quot;https://quality.data.gov.tw/dq_download_csv.php?nid=6231&amp;md5_url=dda8fca407131483c1d8cbf3d61cf793&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICAuZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKVxuKVxuU2VlIHNwZWMoLi4uKSBmb3IgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbnMuXG4ifQ== -->
-<pre><code>Parsed with column specification:
-cols(
-  .default = col_character()
-)
-See spec(...) for full column specifications.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGNvbGxlZ2VEYXRhJOWtuOagoeS7o+eivClcbmBgYCJ9 -->
-<pre class="r"><code>levels(collegeData$學校代碼)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTlVMTFxuIn0= -->
-<pre><code>NULL</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div class="section level1">
@@ -307,9 +264,6 @@ mutate(collegeData,
        ) -&gt;
   collegeData2</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoi5by35Yi26K6K5pu06YGO56iL5Lit55Si55Sf5LqGIE5B5by35Yi26K6K5pu06YGO56iL5Lit55Si55Sf5LqGIE5BXG4ifQ== -->
-<pre><code>強制變更過程中產生了 NA強制變更過程中產生了 NA</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -317,33 +271,263 @@ mutate(collegeData,
 <h1>6.3.1 practice3</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmNvbGxlZ2VEYXRhICU+JVxubXV0YXRlKFxuICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksXG4gICAgICAg562J57Sa5YilPWFzLmZhY3RvcijnrYnntJrliKUpLFxuICAgICAgIOS4gOW5tOe0mueUt+eUnz1hcy5udW1lcmljKOS4gOW5tOe0mueUt+eUnyksXG4gICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKVxuICAgICAgICkgLT5cbiAgY29sbGVnZURhdGEyXG5gYGAifQ== -->
+<pre class="r"><code>library(dplyr)
+collegeData %&gt;%
+mutate(
+       `日間∕進修別`=as.factor(`日間∕進修別`),
+       等級別=as.factor(等級別),
+       一年級男生=as.numeric(一年級男生),
+       一年級女生=as.numeric(一年級女生)
+       ) -&gt;
+  collegeData2</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div class="section level1">
-<h1>舊寫法</h1>
+<h1>舊寫法(老師提供)</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <p><code>r  collegeData$學校代碼&lt;-as.factor(collegeData$學校代碼)  collegeData$學校名稱&lt;-as.factor(collegeData$學校名稱)  collegeData -&gt; collegeData2</code></p>
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<p><code>r  collegeData$`日間∕進修別`&lt;-as.factor(collegeData$`日間∕進修別`)  collegeData$等級別&lt;-as.factor(collegeData$等級別)  collegeData$一年級男生&lt;-as.numeric(collegeData$一年級男生)  collegeData$一年級女生&lt;-as.numeric(collegeData$一年級女生)  collegeData -&gt; collegeData2</code></p>
+<p><code>r  ibrary(readr)  l&lt;-locale(grouping_mark = &quot;,&quot;) # 創造cl來描述千分位符號使用&quot;,&quot;的習慣場景  ollegeData %&gt;%    mutate(     `日間∕進修別`=as.factor(`日間∕進修別`),     等級別=as.factor(等級別),     一年級男生=parse_number(一年級男生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl),     一年級女生=parse_number(一年級女生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl)   ) -&gt; collegeData4</code></p>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p># mutate寫法</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<p><code>r  library(dplyr)  mutate(collegeData,        `日間∕進修別`=as.factor(`日間∕進修別`),        等級別=as.factor(等級別),        一年級男生=as.numeric(一年級男生),        一年級女生=as.numeric(一年級女生)        ) -&gt;   collegeData2</code></p>
+<p><code>r  roblems(collegeData4$一年級男生)</code> <!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MTY3fSwicmRmIjoiSDRzSUFBQUFBQUFBQSszWVhZaE1ZUmpBOGZkOXpveWRuZHFkalFzWExpd2h4WXlhVWo0dXVLQ0lVdHpNQ2prN2M1Wmg1c3lZT2RPdWo3UkszQkFwaW55RWl3MUppcElVRVNFZlNaRVVDWWxTSkpHUEhmOHpNNmQyNTlxRjlFNzlacDdublRObjN1ZDVUdE4wbHM1TEphT3BxRkpLbEdWWlNpekNrUENrVlVpMStxOTlTbG1qL0ZXMFlRRHRXSXdVdXJBY0s3QWFQY2loZ0RMNHZOcU1IVGlFSXppT3E3aUdHN2lOZTdpUGgzaU1wM2lHTjNpTDkvaUFqL2lNTC9qSi90aThIb054bUlxWm1JT0ZXQUwycDFlQmZlbGViTUpXYk1OMjdNUXU3TUZCSE1VeG5NQkpVSzgralRNNGkzTzRnTXVnQnMzKzlSMndmODMrOVFNOEF2dlh6L0VDTC9FYTcwQWRtaHIwSjN6REQveFd0YzVMQkRHTXhIaE13aFJNUXhMVE1RT3pNUmZ6c1FDTHNBelVLc3hCVm9KWmlJME1IS3hESGh0UXdrWnNRVC9vZzlBSG9RK3lHL1JDOW1JZjl1TUFEb08rQ0QyUlU2QVhjaDRYY1FsWHdEemxPbTdpRnU2Q25nanpsQ2VnSC9JS3pGU1lxZEFMb1JmQ1BPVXJ2dU1YL0g0TWN0MjFnUGxhc2ZvMWFJMEdzN2JHb2hQTTNKcUFpWmlNV2NFMVNsSEtNUDVGUERxVS96dGEvNEdOMkoxdUpkL3RsRXh1Y3BPYjNPUW1ON25KVFc3eXY1b1AvOStwNHlZd2dRbE1ZSUwvS2hoKy96YWN6dGxsL3o1c3g1REZhTWIyN0VSUHljNDd6WWU3ckFXSGh4cUxWcW5RRzRUcFFxNFJScHkrb3BQMm5Fd2pIMkdudllxZGF6cGhLNTlOQkNmMTc4MUpQMC9WYXJXTGw4R21nMXNLUlM5YmNEbFUvRnZPNGFadDYxTFRRcXppK3FmT3hOTnJLKzc2ZU5JdnJmWjIvZEhXaUFlR3hLSDZWMXJWeHFuQ3dlNGRkMDNXZFlJMjVPeHVKeWkwblJKcUZTU0twYXpyQlQxa3RaendDcDRkSEJlbE44RktyVFkxK0FkTmNnbHlZQmNBQUE9PSJ9 --></p>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+ {"columns":[{"label":["row"],"name":[1],"type":["int"],"align":["right"]},{"label":["col"],"name":[2],"type":["int"],"align":["right"]},{"label":["expected"],"name":[3],"type":["chr"],"align":["left"]},{"label":["actual"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"14","2":"NA","3":"a number","4":"-"},{"1":"76","2":"NA","3":"a number","4":"-"},{"1":"88","2":"NA","3":"a number","4":"-"},{"1":"89","2":"NA","3":"a number","4":"-"},{"1":"90","2":"NA","3":"a number","4":"-"},{"1":"92","2":"NA","3":"a number","4":"-"},{"1":"96","2":"NA","3":"a number","4":"-"},{"1":"102","2":"NA","3":"a number","4":"-"},{"1":"108","2":"NA","3":"a number","4":"-"},{"1":"111","2":"NA","3":"a number","4":"-"},{"1":"115","2":"NA","3":"a number","4":"-"},{"1":"120","2":"NA","3":"a number","4":"-"},{"1":"123","2":"NA","3":"a number","4":"-"},{"1":"134","2":"NA","3":"a number","4":"-"},{"1":"154","2":"NA","3":"a number","4":"-"},{"1":"157","2":"NA","3":"a number","4":"-"},{"1":"161","2":"NA","3":"a number","4":"-"},{"1":"191","2":"NA","3":"a number","4":"-"},{"1":"192","2":"NA","3":"a number","4":"-"},{"1":"195","2":"NA","3":"a number","4":"-"},{"1":"200","2":"NA","3":"a number","4":"-"},{"1":"204","2":"NA","3":"a number","4":"-"},{"1":"205","2":"NA","3":"a number","4":"-"},{"1":"207","2":"NA","3":"a number","4":"-"},{"1":"211","2":"NA","3":"a number","4":"-"},{"1":"215","2":"NA","3":"a number","4":"-"},{"1":"217","2":"NA","3":"a number","4":"-"},{"1":"228","2":"NA","3":"a number","4":"-"},{"1":"229","2":"NA","3":"a number","4":"-"},{"1":"233","2":"NA","3":"a number","4":"-"},{"1":"234","2":"NA","3":"a number","4":"-"},{"1":"237","2":"NA","3":"a number","4":"-"},{"1":"241","2":"NA","3":"a number","4":"-"},{"1":"243","2":"NA","3":"a number","4":"-"},{"1":"251","2":"NA","3":"a number","4":"-"},{"1":"266","2":"NA","3":"a number","4":"-"},{"1":"283","2":"NA","3":"a number","4":"-"},{"1":"289","2":"NA","3":"a number","4":"-"},{"1":"300","2":"NA","3":"a number","4":"-"},{"1":"313","2":"NA","3":"a number","4":"-"},{"1":"319","2":"NA","3":"a number","4":"-"},{"1":"329","2":"NA","3":"a number","4":"-"},{"1":"335","2":"NA","3":"a number","4":"-"},{"1":"345","2":"NA","3":"a number","4":"-"},{"1":"350","2":"NA","3":"a number","4":"-"},{"1":"358","2":"NA","3":"a number","4":"-"},{"1":"375","2":"NA","3":"a number","4":"-"},{"1":"378","2":"NA","3":"a number","4":"-"},{"1":"382","2":"NA","3":"a number","4":"-"},{"1":"385","2":"NA","3":"a number","4":"-"},{"1":"388","2":"NA","3":"a number","4":"-"},{"1":"391","2":"NA","3":"a number","4":"-"},{"1":"396","2":"NA","3":"a number","4":"-"},{"1":"399","2":"NA","3":"a number","4":"-"},{"1":"409","2":"NA","3":"a number","4":"-"},{"1":"414","2":"NA","3":"a number","4":"-"},{"1":"415","2":"NA","3":"a number","4":"-"},{"1":"418","2":"NA","3":"a number","4":"-"},{"1":"419","2":"NA","3":"a number","4":"-"},{"1":"423","2":"NA","3":"a number","4":"-"},{"1":"426","2":"NA","3":"a number","4":"-"},{"1":"427","2":"NA","3":"a number","4":"-"},{"1":"429","2":"NA","3":"a number","4":"-"},{"1":"431","2":"NA","3":"a number","4":"-"},{"1":"436","2":"NA","3":"a number","4":"-"},{"1":"442","2":"NA","3":"a number","4":"-"},{"1":"447","2":"NA","3":"a number","4":"-"},{"1":"451","2":"NA","3":"a number","4":"-"},{"1":"457","2":"NA","3":"a number","4":"-"},{"1":"460","2":"NA","3":"a number","4":"-"},{"1":"461","2":"NA","3":"a number","4":"-"},{"1":"462","2":"NA","3":"a number","4":"-"},{"1":"465","2":"NA","3":"a number","4":"-"},{"1":"471","2":"NA","3":"a number","4":"-"},{"1":"475","2":"NA","3":"a number","4":"-"},{"1":"478","2":"NA","3":"a number","4":"-"},{"1":"479","2":"NA","3":"a number","4":"-"},{"1":"483","2":"NA","3":"a number","4":"-"},{"1":"487","2":"NA","3":"a number","4":"-"},{"1":"489","2":"NA","3":"a number","4":"-"},{"1":"493","2":"NA","3":"a number","4":"-"},{"1":"496","2":"NA","3":"a number","4":"-"},{"1":"503","2":"NA","3":"a number","4":"-"},{"1":"506","2":"NA","3":"a number","4":"-"},{"1":"509","2":"NA","3":"a number","4":"-"},{"1":"515","2":"NA","3":"a number","4":"-"},{"1":"520","2":"NA","3":"a number","4":"-"},{"1":"527","2":"NA","3":"a number","4":"-"},{"1":"530","2":"NA","3":"a number","4":"-"},{"1":"546","2":"NA","3":"a number","4":"-"},{"1":"550","2":"NA","3":"a number","4":"-"},{"1":"555","2":"NA","3":"a number","4":"-"},{"1":"559","2":"NA","3":"a number","4":"-"},{"1":"562","2":"NA","3":"a number","4":"-"},{"1":"565","2":"NA","3":"a number","4":"-"},{"1":"568","2":"NA","3":"a number","4":"-"},{"1":"571","2":"NA","3":"a number","4":"-"},{"1":"576","2":"NA","3":"a number","4":"-"},{"1":"581","2":"NA","3":"a number","4":"-"},{"1":"584","2":"NA","3":"a number","4":"-"},{"1":"587","2":"NA","3":"a number","4":"-"},{"1":"595","2":"NA","3":"a number","4":"-"},{"1":"601","2":"NA","3":"a number","4":"-"},{"1":"604","2":"NA","3":"a number","4":"-"},{"1":"605","2":"NA","3":"a number","4":"-"},{"1":"608","2":"NA","3":"a number","4":"-"},{"1":"609","2":"NA","3":"a number","4":"-"},{"1":"612","2":"NA","3":"a number","4":"-"},{"1":"613","2":"NA","3":"a number","4":"-"},{"1":"618","2":"NA","3":"a number","4":"-"},{"1":"621","2":"NA","3":"a number","4":"-"},{"1":"625","2":"NA","3":"a number","4":"-"},{"1":"626","2":"NA","3":"a number","4":"-"},{"1":"633","2":"NA","3":"a number","4":"-"},{"1":"636","2":"NA","3":"a number","4":"-"},{"1":"640","2":"NA","3":"a number","4":"-"},{"1":"644","2":"NA","3":"a number","4":"-"},{"1":"647","2":"NA","3":"a number","4":"-"},{"1":"652","2":"NA","3":"a number","4":"-"},{"1":"653","2":"NA","3":"a number","4":"-"},{"1":"655","2":"NA","3":"a number","4":"-"},{"1":"656","2":"NA","3":"a number","4":"-"},{"1":"658","2":"NA","3":"a number","4":"-"},{"1":"661","2":"NA","3":"a number","4":"-"},{"1":"662","2":"NA","3":"a number","4":"-"},{"1":"668","2":"NA","3":"a number","4":"-"},{"1":"671","2":"NA","3":"a number","4":"-"},{"1":"675","2":"NA","3":"a number","4":"-"},{"1":"681","2":"NA","3":"a number","4":"-"},{"1":"685","2":"NA","3":"a number","4":"-"},{"1":"689","2":"NA","3":"a number","4":"-"},{"1":"693","2":"NA","3":"a number","4":"-"},{"1":"696","2":"NA","3":"a number","4":"-"},{"1":"700","2":"NA","3":"a number","4":"-"},{"1":"704","2":"NA","3":"a number","4":"-"},{"1":"706","2":"NA","3":"a number","4":"-"},{"1":"709","2":"NA","3":"a number","4":"-"},{"1":"710","2":"NA","3":"a number","4":"-"},{"1":"714","2":"NA","3":"a number","4":"-"},{"1":"717","2":"NA","3":"a number","4":"-"},{"1":"723","2":"NA","3":"a number","4":"-"},{"1":"726","2":"NA","3":"a number","4":"-"},{"1":"731","2":"NA","3":"a number","4":"-"},{"1":"737","2":"NA","3":"a number","4":"-"},{"1":"740","2":"NA","3":"a number","4":"-"},{"1":"741","2":"NA","3":"a number","4":"-"},{"1":"745","2":"NA","3":"a number","4":"-"},{"1":"749","2":"NA","3":"a number","4":"-"},{"1":"753","2":"NA","3":"a number","4":"-"},{"1":"757","2":"NA","3":"a number","4":"-"},{"1":"760","2":"NA","3":"a number","4":"-"},{"1":"764","2":"NA","3":"a number","4":"-"},{"1":"765","2":"NA","3":"a number","4":"-"},{"1":"766","2":"NA","3":"a number","4":"-"},{"1":"775","2":"NA","3":"a number","4":"-"},{"1":"778","2":"NA","3":"a number","4":"-"},{"1":"783","2":"NA","3":"a number","4":"-"},{"1":"787","2":"NA","3":"a number","4":"-"},{"1":"791","2":"NA","3":"a number","4":"-"},{"1":"795","2":"NA","3":"a number","4":"-"},{"1":"799","2":"NA","3":"a number","4":"-"},{"1":"800","2":"NA","3":"a number","4":"-"},{"1":"801","2":"NA","3":"a number","4":"-"},{"1":"804","2":"NA","3":"a number","4":"-"},{"1":"805","2":"NA","3":"a number","4":"-"},{"1":"808","2":"NA","3":"a number","4":"-"},{"1":"826","2":"NA","3":"a number","4":"-"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[167]},"pages":{}}}
+   </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p># pipe</p>
+<p>library(dplyr) collegeData %&gt;% mutate( <code>日間∕進修別</code>=as.factor(<code>日間∕進修別</code>), 等級別=as.factor(等級別), 一年級男生=as.numeric(一年級男生), 一年級女生=as.numeric(一年級女生) ) -&gt; collegeData2 # The end of舊寫法</p>
+</div>
+<div id="na" class="section level1">
+<h1>因為有“,”所以數值出現NA，故做修正</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<p><code>r  library(dplyr)  collegeData %&gt;%  mutate(        `日間∕進修別`=as.factor(`日間∕進修別`),        等級別=as.factor(等級別),        一年級男生=as.numeric(一年級男生),        一年級女生=as.numeric(一年級女生)        ) -&gt;   collegeData2</code></p>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmNsPC1sb2NhbGUoZ3JvdXBpbmdfbWFyayA9IFwiLFwiKSAjIOWJtemAoGNs5L6G5o+P6L+w5Y2D5YiG5L2N56ym6Jmf5L2/55SoXCIsXCLnmoTnv5LmhaPloLTmma9cbmNvbGxlZ2VEYXRhNCAlPiUgXG4gIG11dGF0ZShcbiAgICBg5pel6ZaT4oiV6YCy5L+u5YilYD1hcy5mYWN0b3IoYOaXpemWk+KIlemAsuS/ruWIpWApLFxuICAgIOetiee0muWIpT1hcy5mYWN0b3Io562J57Sa5YilKSxcbiAgICDkuozlubTntJrnlLfnlJ89cGFyc2VfbnVtYmVyKOS6jOW5tOe0mueUt+eUnyxuYT1jKFwiXCIsXCJOQVwiLFwiLVwiKSxsb2NhbGU9Y2wpLFxuICAgIOS6jOW5tOe0muWls+eUnz1wYXJzZV9udW1iZXIo5LqM5bm057Sa5aWz55SfLG5hPWMoXCJcIixcIk5BXCIsXCItXCIpLGxvY2FsZT1jbClcbiAgKSAtPiBjb2xsZWdlRGF0YTRcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)
+cl&lt;-locale(grouping_mark = &quot;,&quot;) # 創造cl來描述千分位符號使用&quot;,&quot;的習慣場景
+collegeData4 %&gt;% 
+  mutate(
+    `日間∕進修別`=as.factor(`日間∕進修別`),
+    等級別=as.factor(等級別),
+    二年級男生=parse_number(二年級男生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl),
+    二年級女生=parse_number(二年級女生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl)
+  ) -&gt; collegeData4</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="locale-setting" class="section level1">
+<h1>locale setting</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lIFxuICBtdXRhdGUoXG4gICAgYOaXpemWk+KIlemAsuS/ruWIpWA9YXMuZmFjdG9yKGDml6XplpPiiJXpgLLkv67liKVgKSxcbiAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksXG4gICAg5LiA5bm057Sa55S355SfPXBhcnNlX251bWJlcijkuIDlubTntJrnlLfnlJ8sbmE9YyhcIlwiLFwiTkFcIixcIi1cIiksbG9jYWxlPWNsKSxcbiAgICDkuIDlubTntJrlpbPnlJ89cGFyc2VfbnVtYmVyKOS4gOW5tOe0muWls+eUnyxuYT1jKFwiXCIsXCJOQVwiLFwiLVwiKSxsb2NhbGU9Y2wpXG4gICkgLT4gY29sbGVnZURhdGE0XG5jb2xsZWdlRGF0YTQgJT4lXG4gIG11dGF0ZShcbiAgICDkuIDlubTntJrnlLfnlJ/mr4/ljYPkuro95LiA5bm057Sa55S355SfLzEwMDAsXG4gICAg5LiA5bm057Sa5aWz55Sf5q+P5Y2D5Lq6PeS4gOW5tOe0muWls+eUny8xMDAwXG4gICAgKSAtPiBjb2xsZWdlRGF0YTVcbmBgYCJ9 -->
+<pre class="r"><code>collegeData %&gt;% 
+  mutate(
+    `日間∕進修別`=as.factor(`日間∕進修別`),
+    等級別=as.factor(等級別),
+    一年級男生=parse_number(一年級男生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl),
+    一年級女生=parse_number(一年級女生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl)
+  ) -&gt; collegeData4
+collegeData4 %&gt;%
+  mutate(
+    一年級男生每千人=一年級男生/1000,
+    一年級女生每千人=一年級女生/1000
+    ) -&gt; collegeData5</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="use-problems-to-find-nas" class="section level1">
+<h1>Use problems() to find NAs</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lXG4gIHNlbGVjdCjkuIDlubTntJrnlLfnlJ8s5LiA5bm057Sa5aWz55SfLFxuICAgICAgICAgICAgICDkuozlubTntJrnlLfnlJ8sIOS6jOW5tOe0muWls+eUnykgLT4gY29sbGVnZTFzdFllYXJEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>collegeData %&gt;%
+  select(一年級男生,一年級女生,
+              二年級男生, 二年級女生) -&gt; college1stYearData</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div class="section level1">
+<h1>以二年級生做練習</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmNsPC1sb2NhbGUoZ3JvdXBpbmdfbWFyayA9IFwiLFwiKSAjIOWJtemAoGNs5L6G5o+P6L+w5Y2D5YiG5L2N56ym6Jmf5L2/55SoXCIsXCLnmoTnv5LmhaPloLTmma9cbmNvbGxlZ2VEYXRhNCAlPiUgXG4gIG11dGF0ZShcbiAgICBg5pel6ZaT4oiV6YCy5L+u5YilYD1hcy5mYWN0b3IoYOaXpemWk+KIlemAsuS/ruWIpWApLFxuICAgIOetiee0muWIpT1hcy5mYWN0b3Io562J57Sa5YilKSxcbiAgICDkuozlubTntJrnlLfnlJ89cGFyc2VfbnVtYmVyKOS6jOW5tOe0mueUt+eUnyxuYT1jKFwiXCIsXCJOQVwiLFwiLVwiKSxsb2NhbGU9Y2wpLFxuICAgIOS6jOW5tOe0muWls+eUnz1wYXJzZV9udW1iZXIo5LqM5bm057Sa5aWz55SfLG5hPWMoXCJcIixcIk5BXCIsXCItXCIpLGxvY2FsZT1jbClcbiAgKSAtPiBjb2xsZWdlRGF0YTRcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)
+cl&lt;-locale(grouping_mark = &quot;,&quot;) # 創造cl來描述千分位符號使用&quot;,&quot;的習慣場景
+collegeData4 %&gt;% 
+  mutate(
+    `日間∕進修別`=as.factor(`日間∕進修別`),
+    等級別=as.factor(等級別),
+    二年級男生=parse_number(二年級男生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl),
+    二年級女生=parse_number(二年級女生,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl)
+  ) -&gt; collegeData4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZTFzdFllYXJEYXRhICU+JVxuICBtdXRhdGVfYWxsKFxuICAgIGZ1bnMoXG4gICAgICBwYXJzZV9udW1iZXIoLixuYT1jKFwiXCIsXCJOQVwiLFwiLVwiKSxsb2NhbGU9Y2wpXG4gICAgKVxuICApIC0+Y29sbGVnZTFzdFllYXJEYXRhTnVtZXJpY1xuIGhlYWQoY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYylcbmBgYCJ9 -->
+<pre class="r"><code>college1stYearData %&gt;%
+  mutate_all(
+    funs(
+      parse_number(.,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;),locale=cl)
+    )
+  ) -&gt;college1stYearDataNumeric
+ head(college1stYearDataNumeric)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWm1aZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0Jva0NNUjhRc3ptRU5UQ0FnRU5yQm9UdTRZRFFSUVVRT2hzcVAva0NBeFJBOUlWQXhkc1BRT2dwUGhDNk1BRkNCenRBNkxZQVZIMlJVSDJOTnlCME4xUi9BVlE4QzZwLzBoRlVmYjR3ZDBMMVRSV0EyZ2NWRDRHYTA3d0JxZzNGNDZ6Sk9ZbkZ4VUNHQUpJZ1YwcGlTYUplV2xGaWJpcTY4anlnR0V3NU1Ld2FRSUw4VDNZMFBOMjU1Zm1XV2MrbmJIOCtaVDZHOE5PbG01R0ZkL1ZnVlEwVGhxbEdzWml6S0w5Y0QyWTVMeEF6Z2J6My8vLy9YMERxSDVwaTl2eUNrc3o4UEtCU0psQ2NzcUo1ajdFSVRVQ2dOQTlrZElwdWNrWnBYcmF1b1Jrb0RNRHlFTUFMWmJNaHNWa2dkakwvaDVyRkNqV0xMVFV2UFRNdkZSWmVPWWxKcVRsUURoL1FEMkF2NkJVVVplYVZ3QUliS0Zxc1Y1SmZrZ2hUeDVXY253TVRBWHVPNFI4QVppb3hBY0lDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["一年級男生"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["一年級女生"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["二年級男生"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["二年級女生"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"90","2":"82","3":"102","4":"59"},{"1":"685","2":"760","3":"571","4":"699"},{"1":"897","2":"1299","3":"888","4":"1348"},{"1":"295","2":"278","3":"264","4":"280"},{"1":"220","2":"77","3":"211","4":"83"},{"1":"1268","2":"714","3":"1201","4":"630"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYyAlPiVcbiAgbXV0YXRlX2FsbChcbiAgICBmdW5zKFxuICAgICAg5q+P55m+5Lq6PS4vMTAwLFxuICAgICAg5q+P5Y2D5Lq6PS4vMTAwMFxuICAgIClcbiAgKSAtPiBjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljXG4gY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYyAlPiUgY29sbmFtZXNcbmBgYCJ9 -->
+<pre class="r"><code>college1stYearDataNumeric %&gt;%
+  mutate_all(
+    funs(
+      每百人=./100,
+      每千人=./1000
+    )
+  ) -&gt; college1stYearDataNumeric
+ college1stYearDataNumeric %&gt;% colnames</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIuS4gOW5tOe0mueUt+eUn1wiICAgICAgICBcIuS4gOW5tOe0muWls+eUn1wiICAgICAgICBcIuS6jOW5tOe0mueUt+eUn1wiICAgICAgIFxuIFs0XSBcIuS6jOW5tOe0muWls+eUn1wiICAgICAgICBcIuS4gOW5tOe0mueUt+eUn1/mr4/nmb7kurpcIiBcIuS4gOW5tOe0muWls+eUn1/mr4/nmb7kurpcIlxuIFs3XSBcIuS6jOW5tOe0mueUt+eUn1/mr4/nmb7kurpcIiBcIuS6jOW5tOe0muWls+eUn1/mr4/nmb7kurpcIiBcIuS4gOW5tOe0mueUt+eUn1/mr4/ljYPkurpcIlxuWzEwXSBcIuS4gOW5tOe0muWls+eUn1/mr4/ljYPkurpcIiBcIuS6jOW5tOe0mueUt+eUn1/mr4/ljYPkurpcIiBcIuS6jOW5tOe0muWls+eUn1/mr4/ljYPkurpcIlxuIn0= -->
+<pre><code> [1] &quot;一年級男生&quot;        &quot;一年級女生&quot;        &quot;二年級男生&quot;       
+ [4] &quot;二年級女生&quot;        &quot;一年級男生_每百人&quot; &quot;一年級女生_每百人&quot;
+ [7] &quot;二年級男生_每百人&quot; &quot;二年級女生_每百人&quot; &quot;一年級男生_每千人&quot;
+[10] &quot;一年級女生_每千人&quot; &quot;二年級男生_每千人&quot; &quot;二年級女生_每千人&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICMgb2xkIHdyaXRpbmdcbmNvbG5hbWVzKGNvbGxlZ2Uxc3RZZWFyRGF0YU51bWVyaWMpXG5gYGAifQ== -->
+<pre class="r"><code> # old writing
+colnames(college1stYearDataNumeric)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIuS4gOW5tOe0mueUt+eUn1wiICAgICAgICBcIuS4gOW5tOe0muWls+eUn1wiICAgICAgICBcIuS6jOW5tOe0mueUt+eUn1wiICAgICAgIFxuIFs0XSBcIuS6jOW5tOe0muWls+eUn1wiICAgICAgICBcIuS4gOW5tOe0mueUt+eUn1/mr4/nmb7kurpcIiBcIuS4gOW5tOe0muWls+eUn1/mr4/nmb7kurpcIlxuIFs3XSBcIuS6jOW5tOe0mueUt+eUn1/mr4/nmb7kurpcIiBcIuS6jOW5tOe0muWls+eUn1/mr4/nmb7kurpcIiBcIuS4gOW5tOe0mueUt+eUn1/mr4/ljYPkurpcIlxuWzEwXSBcIuS4gOW5tOe0muWls+eUn1/mr4/ljYPkurpcIiBcIuS6jOW5tOe0mueUt+eUn1/mr4/ljYPkurpcIiBcIuS6jOW5tOe0muWls+eUn1/mr4/ljYPkurpcIlxuIn0= -->
+<pre><code> [1] &quot;一年級男生&quot;        &quot;一年級女生&quot;        &quot;二年級男生&quot;       
+ [4] &quot;二年級女生&quot;        &quot;一年級男生_每百人&quot; &quot;一年級女生_每百人&quot;
+ [7] &quot;二年級男生_每百人&quot; &quot;二年級女生_每百人&quot; &quot;一年級男生_每千人&quot;
+[10] &quot;一年級女生_每千人&quot; &quot;二年級男生_每千人&quot; &quot;二年級女生_每千人&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lIGNvbG5hbWVzXG5gYGAifQ== -->
+<pre class="r"><code>collegeData %&gt;% colnames</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIuWtuOagoeS7o+eivFwiICAgICBcIuWtuOagoeWQjeeosVwiICAgICBcIuaXpemWk+KIlemAsuS/ruWIpVwiIFwi562J57Sa5YilXCIgICAgICBcbiBbNV0gXCLkuIDlubTntJrnlLfnlJ9cIiAgIFwi5LiA5bm057Sa5aWz55SfXCIgICBcIuS6jOW5tOe0mueUt+eUn1wiICAgXCLkuozlubTntJrlpbPnlJ9cIiAgXG4gWzldIFwi5LiJ5bm057Sa55S355SfXCIgICBcIuS4ieW5tOe0muWls+eUn1wiICAgXCLlm5vlubTntJrnlLfnlJ9cIiAgIFwi5Zub5bm057Sa5aWz55SfXCIgIFxuWzEzXSBcIuS6lOW5tOe0mueUt+eUn1wiICAgXCLkupTlubTntJrlpbPnlJ9cIiAgIFwi5YWt5bm057Sa55S355SfXCIgICBcIuWFreW5tOe0muWls+eUn1wiICBcblsxN10gXCLkuIPlubTntJrnlLfnlJ9cIiAgIFwi5LiD5bm057Sa5aWz55SfXCIgICBcIuW7tuS/rueUn+eUt+eUn1wiICAgXCLlu7bkv67nlJ/lpbPnlJ9cIiAgXG5bMjFdIFwi57ij5biC5ZCN56ixXCIgICAgIFwi6auU57O75YilXCIgICAgICBcbiJ9 -->
+<pre><code> [1] &quot;學校代碼&quot;     &quot;學校名稱&quot;     &quot;日間∕進修別&quot; &quot;等級別&quot;      
+ [5] &quot;一年級男生&quot;   &quot;一年級女生&quot;   &quot;二年級男生&quot;   &quot;二年級女生&quot;  
+ [9] &quot;三年級男生&quot;   &quot;三年級女生&quot;   &quot;四年級男生&quot;   &quot;四年級女生&quot;  
+[13] &quot;五年級男生&quot;   &quot;五年級女生&quot;   &quot;六年級男生&quot;   &quot;六年級女生&quot;  
+[17] &quot;七年級男生&quot;   &quot;七年級女生&quot;   &quot;延修生男生&quot;   &quot;延修生女生&quot;  
+[21] &quot;縣市名稱&quot;     &quot;體系別&quot;      </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>parse_number(.,locale=cl)</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lXG4gIG11dGF0ZV9hdChcbiAgICB2YXJzKFxuICAgICAgY29udGFpbnMoXCLnlJ9cIilcbiAgICApLFxuICAgIGZ1bnMoXG4gICAgICBwYXJzZV9udW1iZXIoLixsb2NhbGU9Y2wsbmE9YyhcIlwiLFwiTkFcIixcIi1cIikpXG4gICAgKVxuICApIC0+IGNvbGxlZ2VEYXRhNVxuIGNvbGxlZ2VEYXRhNSAlPiUgc3RyXG5gYGAifQ== -->
+<pre class="r"><code>collegeData %&gt;%
+  mutate_at(
+    vars(
+      contains(&quot;生&quot;)
+    ),
+    funs(
+      parse_number(.,locale=cl,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;))
+    )
+  ) -&gt; collegeData5
+ collegeData5 %&gt;% str</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ2xhc3NlcyDigJh0YmxfZGbigJksIOKAmHRibOKAmSBhbmQgJ2RhdGEuZnJhbWUnOlx0ODM4IG9icy4gb2YgIDIyIHZhcmlhYmxlczpcbiAkIOWtuOagoeS7o+eivCAgICA6IGNociAgXCIwMDAxXCIgXCIwMDAxXCIgXCIwMDAxXCIgXCIwMDAxXCIgLi4uXG4gJCDlrbjmoKHlkI3nqLEgICAgOiBjaHIgIFwi5ZyL56uL5pS/5rK75aSn5a24XCIgXCLlnIvnq4vmlL/msrvlpKflrbhcIiBcIuWci+eri+aUv+ayu+Wkp+WtuFwiIFwi5ZyL56uL5pS/5rK75aSn5a24XCIgLi4uXG4gJCDml6XplpPiiJXpgLLkv67liKU6IGNociAgXCJEIOaXpVwiIFwiRCDml6VcIiBcIkQg5pelXCIgXCJOIOiBt1wiIC4uLlxuICQg562J57Sa5YilICAgICAgOiBjaHIgIFwiRCDljZrlo6tcIiBcIk0g56Kp5aOrXCIgXCJCIOWtuOWjq1wiIFwiTSDnoqnlo6tcIiAuLi5cbiAkIOS4gOW5tOe0mueUt+eUnyAgOiBudW0gIDkwIDY4NSA4OTcgMjk1IDIyMCAuLi5cbiAkIOS4gOW5tOe0muWls+eUnyAgOiBudW0gIDgyIDc2MCAxMjk5IDI3OCA3NyAuLi5cbiAkIOS6jOW5tOe0mueUt+eUnyAgOiBudW0gIDEwMiA1NzEgODg4IDI2NCAyMTEgLi4uXG4gJCDkuozlubTntJrlpbPnlJ8gIDogbnVtICA1OSA2OTkgMTM0OCAyODAgODMgLi4uXG4gJCDkuInlubTntJrnlLfnlJ8gIDogbnVtICA4NSAzNjkgOTk3IDE2MyAxOTYgNDUyIDExMTAgTkEgNDcgMzg1IC4uLlxuICQg5LiJ5bm057Sa5aWz55SfICA6IG51bSAgNTggNDU2IDEyMjYgMTg1IDU4IC4uLlxuICQg5Zub5bm057Sa55S355SfICA6IG51bSAgNjkgMjIxIDg1OCA5OSAxODMgLi4uXG4gJCDlm5vlubTntJrlpbPnlJ8gIDogbnVtICA2MiAyNjcgMTM3MiA3OCA1OSAuLi5cbiAkIOS6lOW5tOe0mueUt+eUnyAgOiBudW0gIDY2IE5BIE5BIDUwIDEzOCAzIE5BIE5BIDE5IDI5OSAuLi5cbiAkIOS6lOW5tOe0muWls+eUnyAgOiBudW0gIDU0IE5BIE5BIDQ5IDQzIDExIE5BIE5BIDI3IDEzNSAuLi5cbiAkIOWFreW5tOe0mueUt+eUnyAgOiBudW0gIDcyIE5BIE5BIE5BIDExOSA2IE5BIE5BIDEzIDI5MCAuLi5cbiAkIOWFreW5tOe0muWls+eUnyAgOiBudW0gIDM3IE5BIE5BIE5BIDQ1IDYgTkEgTkEgMjAgMTA5IC4uLlxuICQg5LiD5bm057Sa55S355SfICA6IG51bSAgODEgTkEgTkEgTkEgMTg2IE5BIE5BIE5BIDkgMzYzIC4uLlxuICQg5LiD5bm057Sa5aWz55SfICA6IG51bSAgMzUgTkEgTkEgTkEgNjkgTkEgTkEgTkEgNTEgMTYyIC4uLlxuICQg5bu25L+u55Sf55S355SfICA6IG51bSAgTkEgTkEgMjk0IE5BIE5BIE5BIDI2NCBOQSBOQSBOQSAuLi5cbiAkIOW7tuS/rueUn+Wls+eUnyAgOiBudW0gIE5BIE5BIDQ1MyBOQSBOQSBOQSAxNjEgTkEgTkEgTkEgLi4uXG4gJCDnuKPluILlkI3nqLEgICAgOiBjaHIgIFwiMzAg6Ie65YyX5biCXCIgXCIzMCDoh7rljJfluIJcIiBcIjMwIOiHuuWMl+W4glwiIFwiMzAg6Ie65YyX5biCXCIgLi4uXG4gJCDpq5Tns7vliKUgICAgICA6IGNociAgXCIxIOS4gOiIrFwiIFwiMSDkuIDoiKxcIiBcIjEg5LiA6IisXCIgXCIxIOS4gOiIrFwiIC4uLlxuIn0= -->
+<pre><code>Classes ‘tbl_df’, ‘tbl’ and 'data.frame':   838 obs. of  22 variables:
+ $ 學校代碼    : chr  &quot;0001&quot; &quot;0001&quot; &quot;0001&quot; &quot;0001&quot; ...
+ $ 學校名稱    : chr  &quot;國立政治大學&quot; &quot;國立政治大學&quot; &quot;國立政治大學&quot; &quot;國立政治大學&quot; ...
+ $ 日間∕進修別: chr  &quot;D 日&quot; &quot;D 日&quot; &quot;D 日&quot; &quot;N 職&quot; ...
+ $ 等級別      : chr  &quot;D 博士&quot; &quot;M 碩士&quot; &quot;B 學士&quot; &quot;M 碩士&quot; ...
+ $ 一年級男生  : num  90 685 897 295 220 ...
+ $ 一年級女生  : num  82 760 1299 278 77 ...
+ $ 二年級男生  : num  102 571 888 264 211 ...
+ $ 二年級女生  : num  59 699 1348 280 83 ...
+ $ 三年級男生  : num  85 369 997 163 196 452 1110 NA 47 385 ...
+ $ 三年級女生  : num  58 456 1226 185 58 ...
+ $ 四年級男生  : num  69 221 858 99 183 ...
+ $ 四年級女生  : num  62 267 1372 78 59 ...
+ $ 五年級男生  : num  66 NA NA 50 138 3 NA NA 19 299 ...
+ $ 五年級女生  : num  54 NA NA 49 43 11 NA NA 27 135 ...
+ $ 六年級男生  : num  72 NA NA NA 119 6 NA NA 13 290 ...
+ $ 六年級女生  : num  37 NA NA NA 45 6 NA NA 20 109 ...
+ $ 七年級男生  : num  81 NA NA NA 186 NA NA NA 9 363 ...
+ $ 七年級女生  : num  35 NA NA NA 69 NA NA NA 51 162 ...
+ $ 延修生男生  : num  NA NA 294 NA NA NA 264 NA NA NA ...
+ $ 延修生女生  : num  NA NA 453 NA NA NA 161 NA NA NA ...
+ $ 縣市名稱    : chr  &quot;30 臺北市&quot; &quot;30 臺北市&quot; &quot;30 臺北市&quot; &quot;30 臺北市&quot; ...
+ $ 體系別      : chr  &quot;1 一般&quot; &quot;1 一般&quot; &quot;1 一般&quot; &quot;1 一般&quot; ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYyAlPiVcbiAgbXV0YXRlX2FsbChcbiAgICBmdW5zKFxuICAgICAg5q+P55m+5Lq6PS4vMTAwLFxuICAgICAg5q+P5Y2D5Lq6PS4vMTAwMFxuICAgIClcbiAgKSAtPiBjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljXG4gY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYyAlPiUgY29sbmFtZXNcbiAjIG9sZCB3cml0aW5nXG5jb2xuYW1lcyhjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljKVxuYGBgIn0= -->
+<pre class="r"><code>college1stYearDataNumeric %&gt;%
+  mutate_all(
+    funs(
+      每百人=./100,
+      每千人=./1000
+    )
+  ) -&gt; college1stYearDataNumeric
+ college1stYearDataNumeric %&gt;% colnames
+ # old writing
+colnames(college1stYearDataNumeric)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lIGNvbG5hbWVzXG5gYGAifQ== -->
+<pre class="r"><code>collegeData %&gt;% colnames</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbGVnZURhdGEgJT4lXG4gIG11dGF0ZV9hdChcbiAgICB2YXJzKFxuICAgICAgY29udGFpbnMoXCLnlJ9cIilcbiAgICApLFxuICAgIGZ1bnMoXG4gICAgICBwYXJzZV9udW1iZXIoLixsb2NhbGU9Y2wsbmE9YyhcIlwiLFwiTkFcIixcIi1cIikpXG4gICAgKVxuICApIC0+IGNvbGxlZ2VEYXRhNVxuIGNvbGxlZ2VEYXRhNSAlPiUgc3RyXG5gYGAifQ== -->
+<pre class="r"><code>collegeData %&gt;%
+  mutate_at(
+    vars(
+      contains(&quot;生&quot;)
+    ),
+    funs(
+      parse_number(.,locale=cl,na=c(&quot;&quot;,&quot;NA&quot;,&quot;-&quot;))
+    )
+  ) -&gt; collegeData5
+ collegeData5 %&gt;% str</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMS0wNyIKb3V0cHV0OiBodG1sX25vdGVib29rCmF1dGhvcjogIumZs+ebiOiTgSIKc3R1ZGVudElEOiA0MTA1NzMwNzYKLS0tCgpgYGB7cn0KbGlicmFyeShzdHJpbmdyKQpsaWJyYXJ5KGx1YnJpZGF0ZSkK5rCR5ZyL5bm05pyIPC1jKCIwOTkvMDEiLCIwOTkvMDIiLCIwOTkvMDMiKQoKIyAxCnN0cl9jKCIxIizmsJHlnIvlubTmnIgsIi8wMSIpLT7msJHlnIvlubTmnIgKCiMgMgpsdWJyaWRhdGU6OnltZCjmsJHlnIvlubTmnIgpIC0+IOawkeWci+W5tOaciAoKIyAzCuawkeWci+W5tOaciCArIHllYXJzKDkxMSkKYGBgCgoKYGBge3J9CuawkeWci+W5tOaciDwtYygiMDk5LzAxIiwiMDk5LzAyIiwiMDk5LzAzIikKCmxpYnJhcnkoZHBseXIpCiMgMQrmsJHlnIvlubTmnIggJT4lIAogIHN0cl9jKCIxIiwgLiAsIi8wMSIpICU+JQogIHltZCAlPiUKICB7IC4gKyB5ZWFycyg5MTEpIH0KYGBgCmBgYHtyfQpsaWJyYXJ5KGRwbHlyKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpjb2xsZWdlRGF0YSA8LSByZWFkX2NzdigiaHR0cHM6Ly9xdWFsaXR5LmRhdGEuZ292LnR3L2RxX2Rvd25sb2FkX2Nzdi5waHA/bmlkPTYyMzEmbWQ1X3VybD1kZGE4ZmNhNDA3MTMxNDgzYzFkOGNiZjNkNjFjZjc5MyIpCmBgYAoKI+esrOWFreeroOWvq+azlQpgYGB7cn0KbGlicmFyeShkcGx5cikKbXV0YXRlKAogIGNvbGxlZ2VEYXRhLAogIOWtuOagoeS7o+eivD1hcy5mYWN0b3Io5a245qCh5Luj56K8KSwKICDlrbjmoKHlkI3nqLE9YXMuZmFjdG9yKOWtuOagoeWQjeeosSkKICApIC0+IGNvbGxlZ2VEYXRhMgpgYGAKCgojNi4zLjEgcHJhY3RpY2UxIOS7peWJjeeahOWvq+azlQpgYGB7cn0KY29sbGVnZURhdGEk5a245qCh5Luj56K8PC1hcy5mYWN0b3IoY29sbGVnZURhdGEk5a245qCh5Luj56K8KQpjb2xsZWdlRGF0YSTlrbjmoKHlkI3nqLE8LWFzLmZhY3Rvcihjb2xsZWdlRGF0YSTlrbjmoKHlkI3nqLEpCmNvbGxlZ2VEYXRhIC0+IGNvbGxlZ2VEYXRhMgpgYGAKCiM2LjMuMSBwcmFjdGljZTIKYGBge3J9CmxpYnJhcnkoZHBseXIpCm11dGF0ZShjb2xsZWdlRGF0YSwKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgpgYGAKIzYuMy4xIHByYWN0aWNlMwpgYGB7cn0KCmBgYAoKIyDoiIrlr6vms5UKIGBgYHtyfQpjb2xsZWdlRGF0YSTlrbjmoKHku6Pnorw8LWFzLmZhY3Rvcihjb2xsZWdlRGF0YSTlrbjmoKHku6PnorwpCmNvbGxlZ2VEYXRhJOWtuOagoeWQjeeosTwtYXMuZmFjdG9yKGNvbGxlZ2VEYXRhJOWtuOagoeWQjeeosSkKY29sbGVnZURhdGEgLT4gY29sbGVnZURhdGEyCmBgYAogYGBge3J9CmNvbGxlZ2VEYXRhJGDml6XplpPiiJXpgLLkv67liKVgPC1hcy5mYWN0b3IoY29sbGVnZURhdGEkYOaXpemWk+KIlemAsuS/ruWIpWApCmNvbGxlZ2VEYXRhJOetiee0muWIpTwtYXMuZmFjdG9yKGNvbGxlZ2VEYXRhJOetiee0muWIpSkKIGNvbGxlZ2VEYXRhJOS4gOW5tOe0mueUt+eUnzwtYXMubnVtZXJpYyhjb2xsZWdlRGF0YSTkuIDlubTntJrnlLfnlJ8pCmNvbGxlZ2VEYXRhJOS4gOW5tOe0muWls+eUnzwtYXMubnVtZXJpYyhjb2xsZWdlRGF0YSTkuIDlubTntJrlpbPnlJ8pCiBjb2xsZWdlRGF0YSAtPiBjb2xsZWdlRGF0YTIKYGBgCiAjIG11dGF0ZeWvq+azlQogYGBge3J9CmxpYnJhcnkoZHBseXIpCm11dGF0ZShjb2xsZWdlRGF0YSwKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgpgYGAKICMgcGlwZQogYGBge3J9CmxpYnJhcnkoZHBseXIpCmNvbGxlZ2VEYXRhICU+JQptdXRhdGUoCiAgICAgICBg5pel6ZaT4oiV6YCy5L+u5YilYD1hcy5mYWN0b3IoYOaXpemWk+KIlemAsuS/ruWIpWApLAogICAgICAg562J57Sa5YilPWFzLmZhY3RvcijnrYnntJrliKUpLAogICAgICAg5LiA5bm057Sa55S355SfPWFzLm51bWVyaWMo5LiA5bm057Sa55S355SfKSwKICAgICAgIOS4gOW5tOe0muWls+eUnz1hcy5udW1lcmljKOS4gOW5tOe0muWls+eUnykKICAgICAgICkgLT4KICBjb2xsZWdlRGF0YTIKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiMjAxOC0xMS0wNyIKb3V0cHV0OiBodG1sX25vdGVib29rCmF1dGhvcjogIumZs+ebiOiTgSIKc3R1ZGVudElEOiA0MTA1NzMwNzYKLS0tCgpgYGB7cn0KbGlicmFyeShzdHJpbmdyKQpsaWJyYXJ5KGx1YnJpZGF0ZSkK5rCR5ZyL5bm05pyIPC1jKCIwOTkvMDEiLCIwOTkvMDIiLCIwOTkvMDMiKQoKIyAxCnN0cl9jKCIxIizmsJHlnIvlubTmnIgsIi8wMSIpLT7msJHlnIvlubTmnIgKCiMgMgpsdWJyaWRhdGU6OnltZCjmsJHlnIvlubTmnIgpIC0+IOawkeWci+W5tOaciAoKIyAzCuawkeWci+W5tOaciCArIHllYXJzKDkxMSkKYGBgCgoKYGBge3J9CuawkeWci+W5tOaciDwtYygiMDk5LzAxIiwiMDk5LzAyIiwiMDk5LzAzIikKCmxpYnJhcnkoZHBseXIpCiMgMQrmsJHlnIvlubTmnIggJT4lIAogIHN0cl9jKCIxIiwgLiAsIi8wMSIpICU+JQogIHltZCAlPiUKICB7IC4gKyB5ZWFycyg5MTEpIH0KYGBgCmBgYHtyfQpsaWJyYXJ5KGRwbHlyKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpjb2xsZWdlRGF0YSA8LSByZWFkX2NzdigiaHR0cHM6Ly9xdWFsaXR5LmRhdGEuZ292LnR3L2RxX2Rvd25sb2FkX2Nzdi5waHA/bmlkPTYyMzEmbWQ1X3VybD1kZGE4ZmNhNDA3MTMxNDgzYzFkOGNiZjNkNjFjZjc5MyIpCmBgYAoKI+esrOWFreeroOWvq+azlQpgYGB7cn0KbGlicmFyeShkcGx5cikKbXV0YXRlKAogIGNvbGxlZ2VEYXRhLAogIOWtuOagoeS7o+eivD1hcy5mYWN0b3Io5a245qCh5Luj56K8KSwKICDlrbjmoKHlkI3nqLE9YXMuZmFjdG9yKOWtuOagoeWQjeeosSkKICApIC0+IGNvbGxlZ2VEYXRhMgpgYGAKCgojNi4zLjEgcHJhY3RpY2UxIOS7peWJjeeahOWvq+azlQpgYGB7cn0KY29sbGVnZURhdGEk5a245qCh5Luj56K8PC1hcy5mYWN0b3IoY29sbGVnZURhdGEk5a245qCh5Luj56K8KQpjb2xsZWdlRGF0YSTlrbjmoKHlkI3nqLE8LWFzLmZhY3Rvcihjb2xsZWdlRGF0YSTlrbjmoKHlkI3nqLEpCmNvbGxlZ2VEYXRhIC0+IGNvbGxlZ2VEYXRhMgpgYGAKCiM2LjMuMSBwcmFjdGljZTIKYGBge3J9CmxpYnJhcnkoZHBseXIpCm11dGF0ZShjb2xsZWdlRGF0YSwKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgpgYGAKIzYuMy4xIHByYWN0aWNlMwpgYGB7cn0KbGlicmFyeShkcGx5cikKY29sbGVnZURhdGEgJT4lCm11dGF0ZSgKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgpgYGAKCiMg6IiK5a+r5rOVKOiAgeW4q+aPkOS+mykKIGBgYHtyfQpjb2xsZWdlRGF0YSTlrbjmoKHku6Pnorw8LWFzLmZhY3Rvcihjb2xsZWdlRGF0YSTlrbjmoKHku6PnorwpCmNvbGxlZ2VEYXRhJOWtuOagoeWQjeeosTwtYXMuZmFjdG9yKGNvbGxlZ2VEYXRhJOWtuOagoeWQjeeosSkKY29sbGVnZURhdGEgLT4gY29sbGVnZURhdGEyCmBgYAogYGBge3J9CmNvbGxlZ2VEYXRhJGDml6XplpPiiJXpgLLkv67liKVgPC1hcy5mYWN0b3IoY29sbGVnZURhdGEkYOaXpemWk+KIlemAsuS/ruWIpWApCmNvbGxlZ2VEYXRhJOetiee0muWIpTwtYXMuZmFjdG9yKGNvbGxlZ2VEYXRhJOetiee0muWIpSkKIGNvbGxlZ2VEYXRhJOS4gOW5tOe0mueUt+eUnzwtYXMubnVtZXJpYyhjb2xsZWdlRGF0YSTkuIDlubTntJrnlLfnlJ8pCmNvbGxlZ2VEYXRhJOS4gOW5tOe0muWls+eUnzwtYXMubnVtZXJpYyhjb2xsZWdlRGF0YSTkuIDlubTntJrlpbPnlJ8pCiBjb2xsZWdlRGF0YSAtPiBjb2xsZWdlRGF0YTIKYGBgCiAjIG11dGF0ZeWvq+azlQogYGBge3J9CmxpYnJhcnkoZHBseXIpCm11dGF0ZShjb2xsZWdlRGF0YSwKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgpgYGAKICMgcGlwZQoKbGlicmFyeShkcGx5cikKY29sbGVnZURhdGEgJT4lCm11dGF0ZSgKICAgICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICAgICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICAgICAg5LiA5bm057Sa5aWz55SfPWFzLm51bWVyaWMo5LiA5bm057Sa5aWz55SfKQogICAgICAgKSAtPgogIGNvbGxlZ2VEYXRhMgojIFRoZSBlbmQgb2boiIrlr6vms5UKICAKI+WboOeCuuaciSIsIuaJgOS7peaVuOWAvOWHuuePvk5B77yM5pWF5YGa5L+u5q2jCmBgYHtyfQpsaWJyYXJ5KHN0cmluZ3IpCmNvbGxlZ2VEYXRhICU+JQogIG11dGF0ZSggI+Wwh+aJgOaciemAl+iZn+aLv+aOiQogICAg5LiA5bm057Sa55S355SfPXN0cl9yZXBsYWNlKOS4gOW5tOe0mueUt+eUnywiLCIsIiIpLAogICAg5LiA5bm057Sa5aWz55SfPXN0cl9yZXBsYWNlKOS4gOW5tOe0muWls+eUnywiLCIsIiIpCiAgICApICU+JQogIG11dGF0ZSggI+Wwh+Wtl+S4sui9ieaIkOaVuOWAvAogICDkuIDlubTntJrnlLfnlJ89YXMubnVtZXJpYyjkuIDlubTntJrnlLfnlJ8pLAogICDkuIDlubTntJrlpbPnlJ89YXMubnVtZXJpYyjkuIDlubTntJrlpbPnlJ8pIAogICkgLT4gY29sbGVnZURhdGEzCmBgYAoKI2xvY2FsZSBzZXR0aW5nCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpjbDwtbG9jYWxlKGdyb3VwaW5nX21hcmsgPSAiLCIpICMg5Ym16YCgY2zkvobmj4/ov7DljYPliIbkvY3nrKbomZ/kvb/nlKgiLCLnmoTnv5LmhaPloLTmma8KY29sbGVnZURhdGEgJT4lIAogIG11dGF0ZSgKICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICDkuIDlubTntJrnlLfnlJ89cGFyc2VfbnVtYmVyKOS4gOW5tOe0mueUt+eUnyxuYT1jKCIiLCJOQSIsIi0iKSxsb2NhbGU9Y2wpLAogICAg5LiA5bm057Sa5aWz55SfPXBhcnNlX251bWJlcijkuIDlubTntJrlpbPnlJ8sbmE9YygiIiwiTkEiLCItIiksbG9jYWxlPWNsKQogICkgLT4gY29sbGVnZURhdGE0CmBgYAojVXNlIHByb2JsZW1zKCkgdG8gZmluZCBOQXMKYGBge3J9CnByb2JsZW1zKGNvbGxlZ2VEYXRhNCTkuIDlubTntJrnlLfnlJ8pCmBgYAoKI+S7peS6jOW5tOe0mueUn+WBmue3tOe/kgpgYGB7cn0KbGlicmFyeShyZWFkcikKY2w8LWxvY2FsZShncm91cGluZ19tYXJrID0gIiwiKSAjIOWJtemAoGNs5L6G5o+P6L+w5Y2D5YiG5L2N56ym6Jmf5L2/55SoIiwi55qE57+S5oWj5aC05pmvCmNvbGxlZ2VEYXRhNCAlPiUgCiAgbXV0YXRlKAogICAgYOaXpemWk+KIlemAsuS/ruWIpWA9YXMuZmFjdG9yKGDml6XplpPiiJXpgLLkv67liKVgKSwKICAgIOetiee0muWIpT1hcy5mYWN0b3Io562J57Sa5YilKSwKICAgIOS6jOW5tOe0mueUt+eUnz1wYXJzZV9udW1iZXIo5LqM5bm057Sa55S355SfLG5hPWMoIiIsIk5BIiwiLSIpLGxvY2FsZT1jbCksCiAgICDkuozlubTntJrlpbPnlJ89cGFyc2VfbnVtYmVyKOS6jOW5tOe0muWls+eUnyxuYT1jKCIiLCJOQSIsIi0iKSxsb2NhbGU9Y2wpCiAgKSAtPiBjb2xsZWdlRGF0YTQKYGBgCgpgYGB7cn0KY29sbGVnZURhdGEgJT4lIAogIG11dGF0ZSgKICAgIGDml6XplpPiiJXpgLLkv67liKVgPWFzLmZhY3Rvcihg5pel6ZaT4oiV6YCy5L+u5YilYCksCiAgICDnrYnntJrliKU9YXMuZmFjdG9yKOetiee0muWIpSksCiAgICDkuIDlubTntJrnlLfnlJ89cGFyc2VfbnVtYmVyKOS4gOW5tOe0mueUt+eUnyxuYT1jKCIiLCJOQSIsIi0iKSxsb2NhbGU9Y2wpLAogICAg5LiA5bm057Sa5aWz55SfPXBhcnNlX251bWJlcijkuIDlubTntJrlpbPnlJ8sbmE9YygiIiwiTkEiLCItIiksbG9jYWxlPWNsKQogICkgLT4gY29sbGVnZURhdGE0Cgpjb2xsZWdlRGF0YTQgJT4lCiAgbXV0YXRlKAogICAg5LiA5bm057Sa55S355Sf5q+P5Y2D5Lq6PeS4gOW5tOe0mueUt+eUny8xMDAwLAogICAg5LiA5bm057Sa5aWz55Sf5q+P5Y2D5Lq6PeS4gOW5tOe0muWls+eUny8xMDAwCiAgICApIC0+IGNvbGxlZ2VEYXRhNQpgYGAKCgpgYGB7cn0KY29sbGVnZURhdGEgJT4lCiAgc2VsZWN0KOS4gOW5tOe0mueUt+eUnyzkuIDlubTntJrlpbPnlJ8sCiAgICAgICAgICAgICAg5LqM5bm057Sa55S355SfLCDkuozlubTntJrlpbPnlJ8pIC0+IGNvbGxlZ2Uxc3RZZWFyRGF0YQpgYGAKCmBgYHtyfQpjb2xsZWdlMXN0WWVhckRhdGEgJT4lCiAgbXV0YXRlKAogICAg5LiA5bm057Sa55S355SfPXBhcnNlX251bWJlcijkuIDlubTntJrnlLfnlJ8sbG9jYWxlPWNsKSwKICAgIOS4gOW5tOe0muWls+eUnz1wYXJzZV9udW1iZXIoLi4uKSwKICAgIOS6jOW5tOe0mueUt+eUnz1wYXJzZV9udW1iZXIoLi4uKSwgCiAgICDkuozlubTntJrlpbPnlJ89cGFyc2VfbnVtYmVyKC4uLikKICApCmBgYAoKcGFyc2VfbnVtYmVyKC4sbG9jYWxlPWNsKQpgYGB7cn0KY29sbGVnZTFzdFllYXJEYXRhICU+JQogIG11dGF0ZV9hbGwoCiAgICBmdW5zKAogICAgICBwYXJzZV9udW1iZXIoLixuYT1jKCIiLCJOQSIsIi0iKSxsb2NhbGU9Y2wpCiAgICApCiAgKSAtPmNvbGxlZ2Uxc3RZZWFyRGF0YU51bWVyaWMKIGhlYWQoY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYykKYGBgCgpgYGB7cn0KY29sbGVnZTFzdFllYXJEYXRhTnVtZXJpYyAlPiUKICBtdXRhdGVfYWxsKAogICAgZnVucygKICAgICAg5q+P55m+5Lq6PS4vMTAwLAogICAgICDmr4/ljYPkuro9Li8xMDAwCiAgICApCiAgKSAtPiBjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljCiBjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljICU+JSBjb2xuYW1lcwogIyBvbGQgd3JpdGluZwpjb2xuYW1lcyhjb2xsZWdlMXN0WWVhckRhdGFOdW1lcmljKQpgYGAKCmBgYHtyfQpjb2xsZWdlRGF0YSAlPiUgY29sbmFtZXMKYGBgCgpgYGB7cn0KY29sbGVnZURhdGEgJT4lCiAgbXV0YXRlX2F0KAogICAgdmFycygKICAgICAgY29udGFpbnMoIueUnyIpCiAgICApLAogICAgZnVucygKICAgICAgcGFyc2VfbnVtYmVyKC4sbG9jYWxlPWNsLG5hPWMoIiIsIk5BIiwiLSIpKQogICAgKQogICkgLT4gY29sbGVnZURhdGE1CiBjb2xsZWdlRGF0YTUgJT4lIHN0cgpgYGAKCg==</div>
 
 
 

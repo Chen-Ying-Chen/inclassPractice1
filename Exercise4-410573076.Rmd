@@ -2,7 +2,7 @@
 params:
   studentID: "410573076"
   studentName: "陳盈蓁"
-  repoURL: "你的作業github repo網址，為https://github.com/yourUserName/yourRepoName"
+  repoURL: "https://github.com/Chen-Ying-Chen/inclassPractice1/blob/master/Exercise4-410573076.Rmd"
 ---
 存檔時，請用你的學號當延伸檔名。例如：若你的學號為41078392，則請`File->Save As...`存成Exercise4-41078392.Rmd。
 

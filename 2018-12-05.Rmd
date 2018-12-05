@@ -155,3 +155,15 @@ libraryData %>%
   )
 ```
 
+```{r}
+library(summarytools)
+libraryData %>%
+  select_if(
+    is.numeric
+  ) %>% summarytools::dfSummary() %>% summarytools::view(.)
+```
+
+```{r}
+
+```
+

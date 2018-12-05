@@ -1,0 +1,17 @@
+---
+title: "2018-12-05"
+author: "陳盈蓁"
+date: "12/05/2018"
+student ID:410573076
+output: html_document
+---
+
+
+
+```{r}
+library(readr)
+libraryData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv")
+```
+
+
+

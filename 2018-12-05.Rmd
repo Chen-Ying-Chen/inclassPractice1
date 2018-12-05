@@ -128,20 +128,30 @@ subdata <- function(x){libraryData[libraryData$學院==x,] -> subsample
 
 ## Grouping and summarize group feature
 ```{r}
+##grouping
 subdata("社會科學院") -> subsample1
 subdata("人文學院") -> subsample2
 ```
 
 ```{r}
+##group feature summary
 nrow(subsample1)
 nrow(subsample2)
 ```
 ```{r}
 libraryData %>%
-  select(讀者借閱冊數,書籍出版日期) 
+  group_by(學院)%>%
+  summarise(學院借閱冊數=length(學號)
+    )
 ```
 
 ```{r}
-
+libraryData %>%
+  select(讀者借閱冊數,書籍出版日期) %>%
+  summarise(
+    讀者平均借閱冊數=mean(讀者借閱冊數),
+    最小書籍出版日期=min(書籍出版日期,na.rm=T),
+    最大書籍出版日期=max(書籍出版日期,na.rm=T)
+  )
 ```
 

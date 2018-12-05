@@ -100,6 +100,47 @@ minMaxFun4(libraryData$書籍上架年月)->a3
 a3
 ```
 
+###  練習
+```{r}
+is.numeric(libraryData$書籍類別)
+not_numeric<-function(x){!is.numeric(x)}
+```
+```{r}
+not_numeric<-function(x){
+  !is.numeric(x) -> result
+return(result) }
+not_numeric(libraryData$學號)
+```
+###練習:
+找出屬於"人文學院"的子樣本
+```{r}
+libraryData[libraryData$學院=="人文學院",] -> subsample
+```
+
+```{r}
+libraryData[libraryData$學院=="社會科學院",] -> subsample
+```
+
+```{r}
+subdata <- function(x){libraryData[libraryData$學院==x,] -> subsample
+  return(subsample)}
+```
+
+## Grouping and summarize group feature
+```{r}
+subdata("社會科學院") -> subsample1
+subdata("人文學院") -> subsample2
+```
+
+```{r}
+nrow(subsample1)
+nrow(subsample2)
+```
+```{r}
+libraryData %>%
+  select(讀者借閱冊數,書籍出版日期) 
+```
+
 ```{r}
 
 ```

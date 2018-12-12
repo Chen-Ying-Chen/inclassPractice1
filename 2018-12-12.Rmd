@@ -36,6 +36,7 @@ borrowCount_i <- nrow(subsample_i)
 allBorrowCount <- vector("numeric",18)
 ```
 
+##不同館藏地
 ```{r}
 allBorrowCount <- vector("numeric",18)
 for(i in c(1:18)){
@@ -51,6 +52,7 @@ for(i in c(1:18)){
 }
 ```
 
+##不同學院借書量
 ```{r}
 libraryData$學院 %>% as.factor %>% levels -> college
 allBorrowCountofcollege <- vector("numeric",length(college))
@@ -64,6 +66,8 @@ allBorrowCountofcollege[[i]]<- collegeborrowCount_i
 allBorrowCountofcollege
 ```
 
+##不同學號借書量
+(for(i in c(1:length(studentID))可用for(i in seq_along(studentID)))
 ```{r}
 libraryData$學號 %>% as.factor %>% levels -> studentID
 allBorrowCountofeachstudent <- vector("numeric",length(studentID))
@@ -74,9 +78,58 @@ studentIDSubsample_i <-libraryData[numericalIndexForstudentIDSubsample,]
 studentIDborrowCount_i <- nrow(studentIDSubsample_i)
 allBorrowCountofeachstudent[[i]]<- studentIDborrowCount_i
 }
-max(allBorrowCountofeachstudent)
+```
+```{r}
+libraryData %>%
+  group_by(書籍館藏地) %>%
+  summarise(
+    borrowCount=length(學號)
+  ) -> result
+result
 ```
 
 
+```{r}
+libraryData %>%
+  mutate(
+  學系=str_sub(學號,5,6)
+    ##相當於 libraryData$學系 <- str_sub(libraryData$學號,5,6)
+  )-> libraryData
+```
 
+```{r}
+libraryData %>%
+  group_by(學院,入學年) %>%
+  summarise(
+    borrowCount=length(學號)
+  ) -> result2
+result2
+```
+
+```{r}
+ymd_hms(libraryData$借閱時間) %>% with_tz(.,tz="Asia/Taipei") -> libraryData$借閱時間
+libraryData%>%
+  group_by(學號,借閱時間)%>%
+  summarise(
+    
+  )
+```
+
+```{r}
+libraryData %>%
+  mutate(
+      借閱時間=ymd_hms(借閱時間,tz="Asia/Taipei")
+  ) %>%
+  group_by(學號) %>%
+  summarise(
+    第一次借書=min(借閱時間)
+  ) %>%
+  ungroup -> result3
+result3
+```
+
+```{r}
+libraryData %>%
+  filter(入學年==102)
+```
 
